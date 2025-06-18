@@ -1,0 +1,356 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (Simplified, China) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 220,0,0,104
+ PRODUCTVERSION 220,0,0,104
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName", "Nex3D Software Inc."
+            VALUE "FileDescription", "TGAddinTemplate Module"
+            VALUE "FileVersion", "1.0.0"
+            VALUE "InternalName", "TGAddinTemplate"
+            VALUE "LegalCopyright", "Copyright ?2024 Nex3D Software Inc.  All Rights Reserved."
+            VALUE "LegalTrademarks", "Nex3D Software Inc."
+            VALUE "OriginalFilename", "TGAddinTemplate.DLL"
+            VALUE "ProductName", "Nex3D"
+            VALUE "ProductVersion", "1.0.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// REGISTRY
+//
+
+IDR_NEX3DMODELINGTOOL   REGISTRY                "TGCAD.rgs"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_MFCAPPLICATION2_DIALOG AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_EDGEBARDIALOG AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_POPUPDIALOG AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_MY_DIALOG AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// XML
+//
+
+IDR_XML2                XML                     "res\\TGPDMRibbon.xml"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_EDGEBARDIALOG DIALOGEX 0, 0, 149, 176
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "EdgeBar",IDC_BUTTON1,49,80,50,14
+END
+
+IDD_POPUPDIALOG DIALOGEX 0, 0, 265, 144
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Popup Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,159,123,50,14
+    PUSHBUTTON      "取消",IDCANCEL,208,123,50,14
+    PUSHBUTTON      "Button1",IDC_BUTTON1,47,56,50,14
+    PUSHBUTTON      "Button2",IDC_BUTTON2,157,56,50,14
+END
+
+IDD_MY_DIALOG DIALOGEX 0, 0, 199, 72
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "作业4"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    PUSHBUTTON      "绘制并建模",IDC_DRAW_MODEL,31,26,51,18
+    PUSHBUTTON      "创建工程图",IDC_DRAFT,115,26,52,18
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_EDGEBARDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 142
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 169
+    END
+
+    IDD_POPUPDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 258
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 137
+    END
+
+    IDD_MY_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 192
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 65
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP1             BITMAP                  "bitmap1.bmp"
+
+IDB_BITMAP2             BITMAP                  "bitmap2.bmp"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// PNG
+//
+
+IDB_EDGEBAR             PNG                     "EdgeBar.png"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_NAME                "\nTGCAD"
+    IDS_CATEGORY_STRING1    "TGAddinTemplate AddIn Set1"
+    IDS_DESCRIPTION         "Wizard generated Nex3D AddIn"
+    IDS_SAMPLECMD_STRING    "TGAddinTemplate Sample Command Invoked!!!"
+    IDS_CMD_STRING3         "\nTGAddinTemplate Sample Command3\nDemos a radio button\nTGAddinTemplate Command3"
+    IDS_CMD_STRING4         "\nTGAddinTemplate Sample Command4\nDemos a check button\nTGAddinTemplate Command4"
+    IDS_CATEGORY_STRING2    "TGAddinTemplate AddIn Set2"
+    IDS_COMMANDBAR_NAME1    "TGAddinTemplate AddIn Set1\nTGAddinTemplate Addin Set1 Group1"
+    IDS_COMMANDBAR_NAME2    "TGAddinTemplate AddIn Set2\nTGAddinTemplate Addin Set2 Group1"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CMD_STRING5         "\nTGAddinTemplate Sample Command5\nLook at my big alpha bitmap\nTGAddinTemplate Command5"
+    IDS_CMD_STRING6         "\nTGAddinTemplate Sample Command6\nSample command showing multiple group UI\nTGAddinTemplate Command6"
+    IDS_CMD_STRING7         "\nTGAddinTemplate Sample Command7\nSample command showing multiple group UI\nTGAddinTemplate Command7"
+    IDS_COMMANDBAR_NAME3    "TGAddinTemplate AddIn Set1\nTGAddinTemplate Addin Set1 Group 2"
+    IDS_MODELINGCHECKBAR    "TGCAD"
+    IDS_TITLE1              "Step 1"
+    IDS_TITLE2              "Step 2"
+    IDS_E_BAD_INTERNET_EXPLORER_VERSION 
+                            "The installed Internet Explorer is not compatible with HtmlHelp. \nInstall Internet Explorer 4.01 SP2 or later to correct this problem."
+    IDS_HELPFILENAME        "TGAddinTemplate.chm"
+    IDS_SUMMARY             "TGAddinTemplate"
+    IDS_SHORTCUT_CMD        "TGAddinTemplate Shortcut Menu Command"
+    IDS_CMD_STRING8         "\nTGAddinTemplate Sample Command3\nDemos a radio button\nTGAddinTemplate Command3"
+    IDS_CMD_STRING9         "\nTGAddinTemplate Sample Command4\nDemos a check button\nTGAddinTemplate Command4"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_OK                  "OK"
+    IDS_CANCEL              "Cancel"
+    IDS_BUTTON1             "Just another button"
+    IDS_LIST1               "Sample list control"
+    IDS_COMBO1              "Sample combo box control"
+    IDS_ANGLE               "Demonstrates UOM capability for angles"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_LENGTH              "Demonstrates UOM capability for lengths"
+    IDC_SLIDER1             "Sample slider control"
+    IDC_RADIO1              "Sample radio box control"
+    IDC_CHECK1              "Sample check box control"
+    IDC_EDIT1               "Sample edit control"
+    IDC_X                   "Edge automatically used the button text to load the like named bitmap because the text has ""IDB_"" in it"
+    IDC_CHECK               "Demos the command bar's AddBitmapToButton method used to add a bitmap to a button"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CMD_CATEGORY        "TGAddinTemplate"
+    IDS_CMD_GROUP_MODELTESTTOOLS "TGAddinTemplate"
+    IDS_CMD_DATABASECHECK   "Command1\nCommand1\nCommand1"
+    IDS_CMD_MODELINGCHECK   "Command2\nCommand2\nCommand2"
+    IDS_CMD_MODELINGCHECK2  "Command2\nCommand2\nCommand2"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_PMP_CREATE_FLUID_ADD_FLUID_BODIES_TO_DOC 
+                            "Operation: add fluid bodies to doc"
+    IDS_PMP_CREATE_FLUID_CREATE_LEAK_TRACKING_FACES 
+                            "Operation: create leak tracking faces"
+    IDS_PMP_CREATE_FLUID_CLEANING_LEAK_TRACKING_FACES 
+                            "Operation: reset graphic window"
+    IDS_PMP_CREATE_FLUID_CREATE_INTERIOR_BODIES 
+                            "Operation: create interior bodies"
+    IDS_PMP_CREATE_FLUID_CREATE_PREVIEW_INTERIOR_BODIES 
+                            "Operation: create preview interior bodies"
+    IDS_PMP_CREATE_FLUID_CLEAN_PREVIEW_INTERIOR_BODIES 
+                            "Operation: clean preview interior bodies"
+    IDS_PMP_START_SELECT_INTERIOR_FACE_TIP "Select interior seed face"
+    IDS_PMP_START_SELECT_INTERIOR_FACE_CAPTION "Add face"
+    IDS_PMP_UN_START_SELECT_INTERIOR_FACE_CAPTION "Finish"
+    IDS_PMP_CHECK_UNPREVIEW_CAPTION "UnPreview"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_PMP_CHECK_PREVIEW_CAPTION "Preview"
+    IDS_PMP_CREATE_FLUID_SET_ATTRIBUTE_ERROR "Set attriute define failed!"
+    IDS_PMP_TITLE           "Create Fluid Domain"
+    IDS_STRING_FIND_INTERIOR_FACES_WAITING "Finding Interior Faces..."
+    IDS_PMP_CREATE_FLUID_CREATE_FLUID_BOIDES_FEATURE 
+                            "Operation: create fluid bodies feature"
+    PMP_CREATE_FLUID_CREATE_INTERIOR_FACES 
+                            "Operation: create interior faces..."
+    PMP_CREATE_FLUID_FIND_BOUNDARY_EDGES_IN_MERGE_BODY 
+                            "Operation: find boundary edges in merge body..."
+    PMP_CREATE_FLUID_FIND_INTERIOR_CONNECTED_FACES 
+                            "Operation: find interior connected faces..."
+    PMP_CREATE_FLUID_COMPUTE_MERGE_AND_SEPARATE_BODIES 
+                            "Operation : merge components..."
+    PMP_CREATE_FLUID_VOLUME_EXTRACTION_RESULTINFOMESSAGE 
+                            "Number of original bodies: %d\nNumber of merged bodies: %d\nNumber of hanging bodies: %d\nNumber of created bodies: %d"
+    PMP_CREATE_FLUID_FIND_EXTERNAL_CAP_FACES 
+                            "Operation: find external cap faces..."
+    IDS_PMP_CREATE_FLUID_CREATE_OUTERIOR_LEAK_TRACKING_FACES 
+                            "Operation: create exterior leak tracking faces..."
+    IDS_PMP_CREATE_FLUID_CREATE_INTERIOR_LEAK_TRACKING_FACES 
+                            "Operation: create interior leak tracking faces..."
+    IDS_PMP_AUTOMATIC_FIND_CAPFACES_TIP 
+                            "Please selected external cap face first, before check this!"
+    IDS_PMP_CREATE_FLUID_SET_ATTRIBUTE_FOR_FACES 
+                            "Operation : set attribute for faces..."
+END
+
+#endif    // Chinese (Simplified, China) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "1 TYPELIB ""TGCAD.tlb""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+1 TYPELIB "TGCAD.tlb"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Demo">
+      <UniqueIdentifier>{435935f7-d81c-4259-96e2-b1d82dedc026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TGCmds">
+      <UniqueIdentifier>{0aaf4c6b-a95b-4659-b57c-ddbb8afd0be4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TGCore">
+      <UniqueIdentifier>{fdc0014b-37a0-4072-8c31-8e1e59fb4b60}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TGDialogs">
+      <UniqueIdentifier>{df4ada4c-898e-4018-856c-b4fbdf0533cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TGHelper">
+      <UniqueIdentifier>{d13bdcd7-b498-4ad2-a787-00d7a37bfe7c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TGManager">
+      <UniqueIdentifier>{d38e8690-bb1a-4640-811a-a3c9fced448d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Demo\Cmds">
+      <UniqueIdentifier>{e828d78c-1115-418d-adcc-4605452872b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Demo\Dialogs">
+      <UniqueIdentifier>{ecd6df55-5fdd-4021-8f95-909a737a04f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TGDialogs\EdgeBarControl">
+      <UniqueIdentifier>{361cc316-c835-4fcd-8d8a-87d3b63c6dce}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="TGCMDS\TGCmdBase.cpp">
+      <Filter>TGCmds</Filter>
+    </ClCompile>
+    <ClCompile Include="TGCMDS\TGCmdManager.cpp">
+      <Filter>TGCmds</Filter>
+    </ClCompile>
+    <ClCompile Include="TGCORE\TGUIManager.cpp">
+      <Filter>TGCore</Filter>
+    </ClCompile>
+    <ClCompile Include="TGDIALOGS\TGDialog.cpp">
+      <Filter>TGDialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="TGDIALOGS\TGEdgebarparent.cpp">
+      <Filter>TGDialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="TGHELPER\NDSFileHelper.cpp">
+      <Filter>TGHelper</Filter>
+    </ClCompile>
+    <ClCompile Include="TGHELPER\NDSStringHelper.cpp">
+      <Filter>TGHelper</Filter>
+    </ClCompile>
+    <ClCompile Include="TGHELPER\TGHelper.cpp">
+      <Filter>TGHelper</Filter>
+    </ClCompile>
+    <ClCompile Include="TGHELPER\tinyxml2.cpp">
+      <Filter>TGHelper</Filter>
+    </ClCompile>
+    <ClCompile Include="TGHELPER\util.cpp">
+      <Filter>TGHelper</Filter>
+    </ClCompile>
+    <ClCompile Include="TGMANAGER\TGEventManager.cpp">
+      <Filter>TGManager</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="TGCORE\RegTGCAD.cpp">
+      <Filter>TGCore</Filter>
+    </ClCompile>
+    <ClCompile Include="TGCORE\TGCAD.cpp">
+      <Filter>TGCore</Filter>
+    </ClCompile>
+    <ClCompile Include="TGCADApp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DEMO\TGUserCmdEdgebar.cpp">
+      <Filter>Demo\Cmds</Filter>
+    </ClCompile>
+    <ClCompile Include="DEMO\TGUserCmdPopup.cpp">
+      <Filter>Demo\Cmds</Filter>
+    </ClCompile>
+    <ClCompile Include="DEMO\TGEdgebarDialog.cpp">
+      <Filter>Demo\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="DEMO\TGPopupDialog.cpp">
+      <Filter>Demo\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="TGDIALOGS\TGEdgebar.cpp">
+      <Filter>TGDialogs\EdgeBarControl</Filter>
+    </ClCompile>
+    <ClCompile Include="TGUSER\TGUserCmd.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="TGUSER\SaveCmd.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="TGUSER\Func\Func.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="TGUSER\Dialog\MyDialog.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="TGUSER\DialogCmd.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="TGCMDS\TGCmdBase.h">
+      <Filter>TGCmds</Filter>
+    </ClInclude>
+    <ClInclude Include="TGCMDS\TGCmdComObjects.h">
+      <Filter>TGCmds</Filter>
+    </ClInclude>
+    <ClInclude Include="TGCMDS\TGCmdManager.h">
+      <Filter>TGCmds</Filter>
+    </ClInclude>
+    <ClInclude Include="TGCMDS\TGDialogCmd.h">
+      <Filter>TGCmds</Filter>
+    </ClInclude>
+    <ClInclude Include="TGCORE\TGUIManager.h">
+      <Filter>TGCore</Filter>
+    </ClInclude>
+    <ClInclude Include="TGDIALOGS\TGDialog.h">
+      <Filter>TGDialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="TGDIALOGS\TGEdgebarparent.h">
+      <Filter>TGDialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="TGHELPER\character.h">
+      <Filter>TGHelper</Filter>
+    </ClInclude>
+    <ClInclude Include="TGHELPER\NDSFileHelper.h">
+      <Filter>TGHelper</Filter>
+    </ClInclude>
+    <ClInclude Include="TGHELPER\NDSStringHelper.h">
+      <Filter>TGHelper</Filter>
+    </ClInclude>
+    <ClInclude Include="TGHELPER\TGHelper.h">
+      <Filter>TGHelper</Filter>
+    </ClInclude>
+    <ClInclude Include="TGHELPER\tinyxml2.h">
+      <Filter>TGHelper</Filter>
+    </ClInclude>
+    <ClInclude Include="TGHELPER\util.h">
+      <Filter>TGHelper</Filter>
+    </ClInclude>
+    <ClInclude Include="TGMANAGER\TGEventManager.h">
+      <Filter>TGManager</Filter>
+    </ClInclude>
+    <ClInclude Include="MyCommands.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="TGCORE\TGCAD.h">
+      <Filter>TGCore</Filter>
+    </ClInclude>
+    <ClInclude Include="TGCADApp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DEMO\TGUserCmdEdgebar.h">
+      <Filter>Demo\Cmds</Filter>
+    </ClInclude>
+    <ClInclude Include="DEMO\TGUserCmdPopup.h">
+      <Filter>Demo\Cmds</Filter>
+    </ClInclude>
+    <ClInclude Include="DEMO\TGEdgebarDialog.h">
+      <Filter>Demo\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="DEMO\TGPopupDialog.h">
+      <Filter>Demo\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="TGDIALOGS\TGEdgebar.h">
+      <Filter>TGDialogs\EdgeBarControl</Filter>
+    </ClInclude>
+    <ClInclude Include="TGUSER\TGUserCmd.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="TGUSER\Func\Func.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="TGCAD_i.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="TGUSER\SaveCmd.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="TGUSER\Dialog\MyDialog.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="TGUSER\DialogCmd.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="TGCAD.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="res\TGPDMRibbon.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TGCAD.rgs">
+      <Filter>资源文件</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="bitmap1.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="bitmap2.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="EdgeBar.png">
+      <Filter>资源文件</Filter>
+    </Image>
+  </ItemGroup>
+</Project>

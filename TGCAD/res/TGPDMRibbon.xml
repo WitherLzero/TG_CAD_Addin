@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ribbon>
+	<!-- [TGTemple]在此处添加用户自定义的TabbedContainer -->
+	<tab name="天工PDM">
+		<!-- [TGTemple]在此处添加用户自定义的group分组-->
+		<group name="Welcome">
+			<!--  [TGTemple]在此处添加用户自定义的命令按钮 -->
+			<!--  [TGTemple]commandId: 自定义命令ID，必须唯一，用于标识命令 -->
+			<!--  [TGTemple]label: 命令显示的名称 -->
+			<!--  [TGTemple]imageId: 命令显示的图标ID -->
+			<!--  [TGTemple]buttonStyle: 命令按钮的样式 -->
+			<button commandId="0"  label="作业4" imageId="166" buttonStyle="5" />
+			<button commandId="1"  label="保存" imageId="168" buttonStyle="5" />
+			
+		</group>
+	</tab>
+</ribbon>

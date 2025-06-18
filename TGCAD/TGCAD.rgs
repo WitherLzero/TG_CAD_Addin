@@ -1,0 +1,42 @@
+HKCR
+{
+	SampleAddin.SEAddin.1 = s 'Nex3D Addin Class'
+	{
+		CLSID = s '{593A4974-D1D5-45C5-A74F-72300666C29F}'
+	}
+	SampleAddin.SEAddin = s 'Nex3D Addin Class'
+	{
+		CurVer = s 'SampleAddin.Nex3D Addin.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {593A4974-D1D5-45C5-A74F-72300666C29F} = s 'Nex3D Addin Class'
+		{
+			ProgID = s 'SampleAddin.Nex3D Addin.1'
+			VersionIndependentProgID = s 'SampleAddin.Nex3D Addin'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+		}
+	}
+}
+
+HKLM
+{
+	SOFTWARE
+	{
+		Microsoft
+		{
+			Windows
+			{
+				Help
+				{
+					val 'AsmLoc.cnt' = s 'C:\WINNT\Help'
+					val 'AsmLoc.hlp' = s 'C:\WINNT\Help'
+				}
+			}
+		}
+	}				 
+}
