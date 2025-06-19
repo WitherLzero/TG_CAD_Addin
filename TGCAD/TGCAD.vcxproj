@@ -23,6 +23,7 @@
     <ClCompile Include="DEMO\TGPopupDialog.cpp" />
     <ClCompile Include="DEMO\TGUserCmdEdgebar.cpp" />
     <ClCompile Include="DEMO\TGUserCmdPopup.cpp" />
+    <ClCompile Include="testGit.cpp" />
     <ClCompile Include="TGUSER\DialogCmd.cpp" />
     <ClCompile Include="TGUSER\Dialog\MyDialog.cpp" />
     <ClCompile Include="TGUSER\Func\Func.cpp" />
@@ -152,7 +153,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>$(SolutionDir)bin\$(Configuration)\</OutDir>
+    <OutDir>$(SolutionDir)bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)bin\intermediate\$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
@@ -162,7 +164,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>$(SolutionDir)bin\$(Configuration)\</OutDir>
+    <OutDir>$(SolutionDir)bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)bin\intermediate\$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
