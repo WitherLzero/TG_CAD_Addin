@@ -23,7 +23,6 @@
     <ClCompile Include="DEMO\TGPopupDialog.cpp" />
     <ClCompile Include="DEMO\TGUserCmdEdgebar.cpp" />
     <ClCompile Include="DEMO\TGUserCmdPopup.cpp" />
-    <ClCompile Include="testGit.cpp" />
     <ClCompile Include="TGUSER\DialogCmd.cpp" />
     <ClCompile Include="TGUSER\Dialog\MyDialog.cpp" />
     <ClCompile Include="TGUSER\Func\Func.cpp" />

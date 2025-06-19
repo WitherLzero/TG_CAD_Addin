@@ -31,6 +31,6 @@
 *.out
 *.app
 /.vs/TGCAD
-TGCAD/x64/
-TGCAD/Debug/
+
+# Build folder
 bin/
