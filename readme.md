@@ -9,36 +9,46 @@
 
 #### 团队成员：
 
-1. 克隆主仓库
+> [!TIP]
+>
+> 以下相关Git操作，推荐使用vs2022自带的Git工具，详情可参考官网文档：
+>
+> [关于 Visual Studio 中的 Git](https://learn.microsoft.com/zh-cn/visualstudio/version-control/git-with-visual-studio?view=vs-2022) 
+>
+> [git 提取、拉取、推送和同步 - Visual Studio (Windows) | Microsoft Learn](https://learn.microsoft.com/zh-cn/visualstudio/version-control/git-fetch-pull-sync?view=vs-2022)) 
 
-   **命令行操作：**
+1. 克隆主仓库
 
    ```powershell
    git clone https://gitee.com/lzero47/TG_CAD_Addin.git
    ```
 
-   **visual studio加载：**
+2. 参考实训资料—***天工CAD定制开发教程-C++模板介绍***    进行编译/选择调试程序/注册 等操作
 
-   ![image-20250620103859982](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20250620103859982.png)
+3. 创建开发分支：
 
-   ![image-20250620104015059](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20250620104015059.png)
+   ```powershell
+   #eg： create a branch for developing config ui
+   git checkout -b config_ui 
+   ```
 
-2. 创建开发分支：
+4. 开发/修改代码，进行commit与push操作：
 
-   > [!TIP]
-   >
-   > vs2022 配备有Git工具，以下操作以vs2022 Git 图形化界面演示
+   ```powershell
+   # 修改代码
+   git add .
+   git commit -m "config ui initial version"
+   
+   # 推送分支
+   git push origin config_ui
+   ```
 
-   ![image-20250620105028927](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20250620105028927.png) 
+5. 由管理员进行合并branch
 
-   ![image-20250620105254110](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20250620105254110.png) 
+6. 每次打开项目进行开发时，推荐进行pull操作进行更新
 
-   ![image-20250620105407047](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20250620105407047.png) 
+   ```powershell
+   git pull origin master
+   ```
 
-3. 开发/修改代码，进行commit与push操作：
-
-   ![image-20250620105853681](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20250620105853681.png) 
-
-   ![image-20250620105928662](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20250620105928662.png) 
-
-4. 由管理员进行合并branch
+   
