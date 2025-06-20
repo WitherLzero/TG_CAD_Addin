@@ -37,6 +37,8 @@
 
 3. 开发/修改代码，进行commit与push操作：
 
-   
+   ![image-20250620105853681](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20250620105853681.png) 
 
-4. 
+   ![image-20250620105928662](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20250620105928662.png) 
+
+4. 由管理员进行合并branch
