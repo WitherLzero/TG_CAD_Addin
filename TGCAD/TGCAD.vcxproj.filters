@@ -117,6 +117,12 @@
     <ClCompile Include="TGUSER\DialogCmd.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="TGUSER\Dialog\ConfigDialog.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="TGUSER\ConfigCmd.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="TGCMDS\TGCmdBase.h">
@@ -207,6 +213,12 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="TGUSER\DialogCmd.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="TGUSER\Dialog\ConfigDialog.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="TGUSER\ConfigCmd.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

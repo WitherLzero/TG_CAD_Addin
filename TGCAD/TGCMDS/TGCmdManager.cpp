@@ -58,11 +58,16 @@ void TGCmdManager::InitCommandMap()
 {
     INITCMDCOM(DialogCmdObj, DialogCommand);
     INITCMDCOM(SaveCmdObj, SaveCommand);
+    
+    INITCMDCOM(ConfigCmdObj, ConfigCommand);
 
 
 ;
     InsertCommand(0, DialogCommand);
     InsertCommand(1, SaveCommand);
+    
+    InsertCommand(100, ConfigCommand);
+
 
 }
 

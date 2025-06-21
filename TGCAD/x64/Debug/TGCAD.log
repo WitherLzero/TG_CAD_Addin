@@ -1,0 +1,7 @@
+﻿  TGCmdManager.cpp
+D:\visualstudio\project\TGCAD\TGCAD\TGCMDS\TGCmdManager.cpp(1,1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+  TGCAD.vcxproj -> D:\visualstudio\project\TGCAD\bin\Debug\TGCAD.dll
+  D:\visualstudio\project\TGCAD\TGCAD\regsvr.bat
+  复制了 1 个文件
+  D:\visualstudio\project\TGCAD\TGCAD\regsvrUn.bat
+  复制了 1 个文件

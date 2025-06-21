@@ -65,9 +65,19 @@
 #define IDC_RADIO1                      1010
 #define IDC_CHECK1                      1011
 #define IDC_EDIT1                       1013
+#define IDC_PARA_NAME                   1013
+#define IDC_BIND_VAR                    1014
 #define IDC_X                           1015
+#define IDC_COMBO1                      1015
+#define IDC_VAR_COMBO                   1015
+#define IDC_LIST3                       1016
+#define IDC_LIST1                       1017
+#define IDC_CONFIG_LIST                 1017
+#define IDC_EDIT2                       1018
+#define IDC_ADD                         1019
 #define IDC_CHECK                       1020
 #define IDD_MY_DIALOG                   1076
+#define IDD_CONFIG_DIALOG               1077
 #define IDS_CMD_CATEGORY                2000
 #define IDS_CMD_GROUP_MODELTESTTOOLS    2001
 #define IDS_CMD_DATABASECHECK           2002
@@ -110,9 +120,9 @@
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
-#define _APS_NEXT_RESOURCE_VALUE        170
+#define _APS_NEXT_RESOURCE_VALUE        171
 #define _APS_NEXT_COMMAND_VALUE         40002
-#define _APS_NEXT_CONTROL_VALUE         1009
-#define _APS_NEXT_SYMED_VALUE           1077
+#define _APS_NEXT_CONTROL_VALUE         1020
+#define _APS_NEXT_SYMED_VALUE           1078
 #endif
 #endif

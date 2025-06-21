@@ -14,6 +14,9 @@
 #include "../TGUSER/TGUserCmd.h"
 #include "../TGUSER/SaveCmd.h"
 
+//Project: cmd class
+#include "TGUSER/ConfigCmd.h"
+
 
 // 弹窗命令Com对象 - 只需要弹出界面
 typedef CComObject<TGCmdDialog<TGPopupDialog>> TGCmdDialogObj;
@@ -33,3 +36,6 @@ typedef CComObject<DialogCmd> DialogCmdObj;
 typedef CComObject<TGUserCmd> TGCmdUserCmdObj;
 
 typedef CComObject<SaveCmd> SaveCmdObj;
+
+// Project Cmd Obj
+typedef CComObject<ConfigCmd> ConfigCmdObj;

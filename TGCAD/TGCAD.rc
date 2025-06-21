@@ -92,6 +92,11 @@ BEGIN
     0
 END
 
+IDD_CONFIG_DIALOG AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -133,6 +138,21 @@ BEGIN
     PUSHBUTTON      "创建工程图",IDC_DRAFT,115,26,52,18
 END
 
+IDD_CONFIG_DIALOG DIALOGEX 0, 0, 423, 245
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "配置"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,309,224,50,14
+    PUSHBUTTON      "取消",IDCANCEL,366,224,50,14
+    LTEXT           "参数名：",IDC_PARA_NAME,15,177,42,13
+    LTEXT           "绑定变量：",IDC_BIND_VAR,144,177,42,11
+    COMBOBOX        IDC_VAR_COMBO,185,176,71,30,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_CONFIG_LIST,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,7,409,160
+    EDITTEXT        IDC_EDIT2,46,176,71,13,ES_AUTOHSCROLL
+    PUSHBUTTON      "添加",IDC_ADD,309,175,50,14
+END
+
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -164,6 +184,14 @@ BEGIN
         RIGHTMARGIN, 192
         TOPMARGIN, 7
         BOTTOMMARGIN, 65
+    END
+
+    IDD_CONFIG_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 416
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 238
     END
 END
 #endif    // APSTUDIO_INVOKED
