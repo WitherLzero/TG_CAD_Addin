@@ -40,6 +40,12 @@
     <Filter Include="TGDialogs\EdgeBarControl">
       <UniqueIdentifier>{361cc316-c835-4fcd-8d8a-87d3b63c6dce}</UniqueIdentifier>
     </Filter>
+    <Filter Include="TGUSER">
+      <UniqueIdentifier>{dbaea9f4-a3fa-48be-a561-0018e979fa3b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TGUSER\DIALOG">
+      <UniqueIdentifier>{5f23e8c8-498e-4750-b307-d57cd6d4004b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="TGCMDS\TGCmdBase.cpp">
@@ -105,23 +111,29 @@
     <ClCompile Include="TGUSER\TGUserCmd.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="TGUSER\SaveCmd.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="TGUSER\Func\Func.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="TGUSER\Dialog\MyDialog.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="TGUSER\ConfigCmd.cpp">
+      <Filter>TGUSER</Filter>
+    </ClCompile>
     <ClCompile Include="TGUSER\DialogCmd.cpp">
-      <Filter>源文件</Filter>
+      <Filter>TGUSER</Filter>
     </ClCompile>
     <ClCompile Include="TGUSER\Dialog\ConfigDialog.cpp">
-      <Filter>源文件</Filter>
+      <Filter>TGUSER\DIALOG</Filter>
     </ClCompile>
-    <ClCompile Include="TGUSER\ConfigCmd.cpp">
-      <Filter>源文件</Filter>
+    <ClCompile Include="TGUSER\Func\Func.cpp">
+      <Filter>TGUSER</Filter>
+    </ClCompile>
+    <ClCompile Include="TGUSER\SaveCmd.cpp">
+      <Filter>TGUSER</Filter>
+    </ClCompile>
+    <ClCompile Include="TGUSER\Dialog\ParamDriveDialog.cpp">
+      <Filter>TGUSER\DIALOG</Filter>
+    </ClCompile>
+    <ClCompile Include="TGUSER\ParamDriveCmd.cpp">
+      <Filter>TGUSER</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -212,14 +224,20 @@
     <ClInclude Include="TGUSER\Dialog\MyDialog.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="TGUSER\ConfigCmd.h">
+      <Filter>TGUSER</Filter>
+    </ClInclude>
     <ClInclude Include="TGUSER\DialogCmd.h">
-      <Filter>头文件</Filter>
+      <Filter>TGUSER</Filter>
     </ClInclude>
     <ClInclude Include="TGUSER\Dialog\ConfigDialog.h">
-      <Filter>头文件</Filter>
+      <Filter>TGUSER\DIALOG</Filter>
     </ClInclude>
-    <ClInclude Include="TGUSER\ConfigCmd.h">
-      <Filter>头文件</Filter>
+    <ClInclude Include="TGUSER\Dialog\ParamDriveDialog.h">
+      <Filter>TGUSER\DIALOG</Filter>
+    </ClInclude>
+    <ClInclude Include="TGUSER\ParamDriveCmd.h">
+      <Filter>TGUSER</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

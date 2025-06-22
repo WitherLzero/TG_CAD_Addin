@@ -13,7 +13,7 @@
 #undef APSTUDIO_READONLY_SYMBOLS
 
 /////////////////////////////////////////////////////////////////////////////
-// Chinese (Simplified, China) resources
+// 中文(简体，中国) resources
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
 LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
@@ -97,6 +97,11 @@ BEGIN
     0
 END
 
+IDD_PARAM_DRIVE_DIALOG AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -146,11 +151,45 @@ BEGIN
     DEFPUSHBUTTON   "确定",IDOK,309,224,50,14
     PUSHBUTTON      "取消",IDCANCEL,366,224,50,14
     LTEXT           "参数名：",IDC_PARA_NAME,15,177,42,13
-    LTEXT           "绑定变量：",IDC_BIND_VAR,144,177,42,11
-    COMBOBOX        IDC_VAR_COMBO,185,176,71,30,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "绑定变量：",IDC_BIND_VAR,144,177,52,11
+    COMBOBOX        IDC_VAR_COMBO,191,176,71,30,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
     CONTROL         "",IDC_CONFIG_LIST,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,7,409,160
     EDITTEXT        IDC_EDIT2,46,176,71,13,ES_AUTOHSCROLL
     PUSHBUTTON      "添加",IDC_ADD,309,175,50,14
+END
+
+IDD_PARAM_DRIVE_DIALOG DIALOGEX 0, 0, 383, 243
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "参数配置"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,199,222,50,14
+    PUSHBUTTON      "取消",IDCANCEL,326,222,50,14
+    GROUPBOX        "",IDC_PARAM_GROUP1,17,16,350,36
+    LTEXT           "变量名：",IDC_STATIC_PARAM1,30,31,35,8
+    LTEXT           "值：",IDC_STATIC_VAL1,213,31,18,8
+    EDITTEXT        IDC_EDIT_VAL1,233,29,106,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PARAM1,63,29,91,14,ES_AUTOHSCROLL | ES_READONLY | NOT WS_VISIBLE
+    GROUPBOX        "",IDC_PARAM_GROUP2,17,55,350,36
+    LTEXT           "变量名：",IDC_STATIC_PARAM2,30,70,35,8
+    LTEXT           "值：",IDC_STATIC_VAL2,213,70,18,8
+    EDITTEXT        IDC_EDIT_VAL2,233,68,106,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PARAM2,63,68,91,14,ES_AUTOHSCROLL | ES_READONLY | NOT WS_VISIBLE
+    GROUPBOX        "",IDC_PARAM_GROUP3,17,94,350,36
+    LTEXT           "变量名：",IDC_STATIC_PARAM3,30,109,35,8
+    LTEXT           "值：",IDC_STATIC_VAL3,213,109,18,8
+    EDITTEXT        IDC_EDIT_VAL3,233,107,106,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PARAM3,63,107,91,14,ES_AUTOHSCROLL | ES_READONLY | NOT WS_VISIBLE
+    GROUPBOX        "",IDC_PARAM_GROUP4,17,133,350,36
+    LTEXT           "变量名：",IDC_STATIC_PARAM5,30,148,35,8
+    LTEXT           "值：",IDC_STATIC_VAL4,213,148,18,8
+    EDITTEXT        IDC_EDIT_VAL4,233,146,106,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PARAM4,63,146,91,14,ES_AUTOHSCROLL | ES_READONLY | NOT WS_VISIBLE
+    GROUPBOX        "",IDC_PARAM_GROUP6,17,172,350,36
+    LTEXT           "变量名：",IDC_STATIC_PARAM7,30,187,35,8
+    LTEXT           "值：",IDC_STATIC_VAL5,213,187,18,8
+    EDITTEXT        IDC_EDIT_VAL5,233,185,106,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PARAM5,63,185,91,14,ES_AUTOHSCROLL | ES_READONLY | NOT WS_VISIBLE
 END
 
 
@@ -192,6 +231,14 @@ BEGIN
         RIGHTMARGIN, 416
         TOPMARGIN, 7
         BOTTOMMARGIN, 238
+    END
+
+    IDD_PARAM_DRIVE_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 376
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 236
     END
 END
 #endif    // APSTUDIO_INVOKED
@@ -331,12 +378,12 @@ BEGIN
                             "Operation : set attribute for faces..."
 END
 
-#endif    // Chinese (Simplified, China) resources
+#endif    // 中文(简体，中国) resources
 /////////////////////////////////////////////////////////////////////////////
 
 
 /////////////////////////////////////////////////////////////////////////////
-// English (United States) resources
+// 英语(美国) resources
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
 LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
@@ -367,7 +414,7 @@ END
 
 #endif    // APSTUDIO_INVOKED
 
-#endif    // English (United States) resources
+#endif    // 英语(美国) resources
 /////////////////////////////////////////////////////////////////////////////
 
 
