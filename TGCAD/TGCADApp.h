@@ -6,6 +6,7 @@
 
 #include "resource.h"
 #include "TGCAD_i.h"
+#include "TGMANAGER/DataManager.h"
 
 
 class TGCAD;
@@ -23,9 +24,11 @@ public:
 	TGCAD* GetTGAddin();
 	void SetTGAddin(TGCAD* pAddin);
 	static ApplicationPtr GetApplication();
+	DataManager* GetDataManager();
 
 private:
 	TGCAD* m_pTGAddin;
+	DataManager* m_pDataManager;
 };
 
 

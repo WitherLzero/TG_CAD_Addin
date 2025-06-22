@@ -12,7 +12,12 @@ public:
 	ConfigDialog(CWnd* pParent = nullptr);   // standard constructor
 	virtual ~ConfigDialog();
 
+
+public:   
+	// assistant functions
 	void initConfigList();
+	void refreshVarCombo();
+	void refreshConfigList();
 
 // Dialog Data
 #ifdef AFX_DESIGN_TIME
@@ -26,4 +31,10 @@ protected:
 public:
 	CListCtrl m_configList;
 	virtual BOOL OnInitDialog();
+	CEdit m_paramEdit;
+	CComboBox m_varCombo;
+
+
+private:
+	DataManager* pDataManager; //local manager pointers
 };

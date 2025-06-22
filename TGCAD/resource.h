@@ -31,6 +31,8 @@
 #define IDR_BIN2                        141
 #define IDR_ZIPRES                      145
 #define IDD_DIALOG6                     146
+#define IDD_PARAMATER                   146
+#define IDD_PARAM_DRIVE_DIALOG          146
 #define IDC_TREECTRL                    150
 #define IDC_LISTCTRL                    151
 #define IDB_FOLDER_L                    152
@@ -74,8 +76,44 @@
 #define IDC_LIST1                       1017
 #define IDC_CONFIG_LIST                 1017
 #define IDC_EDIT2                       1018
+#define IDC_PARAM_EDIT                  1018
 #define IDC_ADD                         1019
+#define IDC_EDIT_VAL1                   1019
 #define IDC_CHECK                       1020
+#define IDC_EDIT_VAL2                   1020
+#define IDC_EDIT_VAL3                   1021
+#define IDC_EDIT_VAL4                   1022
+#define IDC_EDIT_VAL5                   1023
+#define IDC_STATIC_PARAM1               1024
+#define IDC_STATIC_VAL1                 1025
+#define IDC_STATIC_PARAM2               1026
+#define IDC_STATIC_VAL6                 1027
+#define IDC_STATIC_VAL2                 1027
+#define IDC_STATIC_PARAM4               1028
+#define IDC_STATIC_PARAM3               1028
+#define IDC_STATIC_VAL7                 1029
+#define IDC_STATIC_VAL3                 1029
+#define IDC_STATIC_PARAM6               1030
+#define IDC_STATIC_PARAM5               1030
+#define IDC_STATIC_VAL8                 1031
+#define IDC_STATIC_VAL4                 1031
+#define IDC_STATIC_PARAM7               1032
+#define IDC_STATIC_VAL9                 1033
+#define IDC_STATIC_VAL5                 1033
+#define IDC_EDIT_PARAM1                 1034
+#define IDC_EDIT_PARAM2                 1035
+#define IDC_PARAM_GROUP1                1036
+#define IDC_PARAM_GROUP2                1037
+#define IDC_PARAM_GROUP3                1038
+#define IDC_EDIT_PARAM6                 1039
+#define IDC_EDIT_PARAM3                 1039
+#define IDC_PARAM_GROUP5                1040
+#define IDC_PARAM_GROUP4                1040
+#define IDC_EDIT_PARAM7                 1041
+#define IDC_EDIT_PARAM4                 1041
+#define IDC_PARAM_GROUP6                1042
+#define IDC_EDIT_PARAM8                 1043
+#define IDC_EDIT_PARAM5                 1043
 #define IDD_MY_DIALOG                   1076
 #define IDD_CONFIG_DIALOG               1077
 #define IDS_CMD_CATEGORY                2000
@@ -120,9 +158,9 @@
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
-#define _APS_NEXT_RESOURCE_VALUE        171
+#define _APS_NEXT_RESOURCE_VALUE        175
 #define _APS_NEXT_COMMAND_VALUE         40002
-#define _APS_NEXT_CONTROL_VALUE         1020
+#define _APS_NEXT_CONTROL_VALUE         1036
 #define _APS_NEXT_SYMED_VALUE           1078
 #endif
 #endif

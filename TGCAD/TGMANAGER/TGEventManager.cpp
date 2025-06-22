@@ -11,6 +11,8 @@
 #include "../TGDialogs/TGEdgebar.h"
 #include "../TGCmds/TGCmdManager.h"
 
+DataManager* pDataManager = nullptr;
+
 ISEAddInExPtr TGEventManager::m_pSEAddIn = NULL;
 ApplicationPtr TGEventManager::m_pApplication = NULL;;
 

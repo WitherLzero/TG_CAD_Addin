@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="TGMANAGER\DataManager.cpp" />
     <ClCompile Include="TGUSER\ConfigCmd.cpp" />
     <ClCompile Include="TGUSER\Dialog\ConfigDialog.cpp" />
     <ClCompile Include="DEMO\TGEdgebarDialog.cpp" />
@@ -27,7 +28,9 @@
     <ClCompile Include="DEMO\TGUserCmdPopup.cpp" />
     <ClCompile Include="TGUSER\DialogCmd.cpp" />
     <ClCompile Include="TGUSER\Dialog\MyDialog.cpp" />
+    <ClCompile Include="TGUSER\Dialog\ParamDriveDialog.cpp" />
     <ClCompile Include="TGUSER\Func\Func.cpp" />
+    <ClCompile Include="TGUSER\ParamDriveCmd.cpp" />
     <ClCompile Include="TGUSER\SaveCmd.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
@@ -51,6 +54,7 @@
     <ClCompile Include="TGUSER\TGUserCmd.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="TGMANAGER\DataManager.h" />
     <ClInclude Include="TGUSER\ConfigCmd.h" />
     <ClInclude Include="TGUSER\Dialog\ConfigDialog.h" />
     <ClInclude Include="DEMO\TGEdgebarDialog.h" />
@@ -61,6 +65,8 @@
     <ClInclude Include="MyCommands.h" />
     <ClInclude Include="TGUSER\Dialog\MyDialog.h" />
     <ClInclude Include="resource.h" />
+    <ClInclude Include="TGUSER\Dialog\ParamDriveDialog.h" />
+    <ClInclude Include="TGUSER\ParamDriveCmd.h" />
     <ClInclude Include="TGUSER\SaveCmd.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="TGCADApp.h" />
