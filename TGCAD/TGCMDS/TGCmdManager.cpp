@@ -60,7 +60,6 @@ void TGCmdManager::InitCommandMap()
     INITCMDCOM(SaveCmdObj, SaveCommand);
     
     INITCMDCOM(ConfigCmdObj, ConfigCommand);
-    INITCMDCOM(ParamDriveCmdObj, ParamDriveCommand);
 
 
 ;
@@ -68,7 +67,6 @@ void TGCmdManager::InitCommandMap()
     InsertCommand(1, SaveCommand);
     
     InsertCommand(100, ConfigCommand);
-    InsertCommand(101, ParamDriveCommand);
 
 
 }

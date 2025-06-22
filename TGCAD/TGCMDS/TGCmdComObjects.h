@@ -16,7 +16,6 @@
 
 //Project: cmd class
 #include "TGUSER/ConfigCmd.h"
-#include "TGUSER/ParamDriveCmd.h"
 
 
 // 弹窗命令Com对象 - 只需要弹出界面
@@ -40,4 +39,3 @@ typedef CComObject<SaveCmd> SaveCmdObj;
 
 // Project Cmd Obj
 typedef CComObject<ConfigCmd> ConfigCmdObj;
-typedef CComObject<ParamDriveCmd> ParamDriveCmdObj;
