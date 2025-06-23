@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include "afxdialogex.h"
 
 
@@ -12,11 +12,9 @@ public:
 	ParamDriveDialog(CWnd* pParent = nullptr);   // standard constructor
 	virtual ~ParamDriveDialog();
 
-	void initConfigList();
-
 	// Dialog Data
 #ifdef AFX_DESIGN_TIME
-	enum { IDD = IDD_CONFIG_DIALOG };
+	enum { IDD = IDD_PARAM_DRIVE_DIALOG};
 #endif
 
 protected:
@@ -24,6 +22,16 @@ protected:
 
 	DECLARE_MESSAGE_MAP()
 public:
-	CListCtrl m_configList;
-	virtual BOOL OnInitDialog();
+
+	//CListCtrl m_configList;
+	//virtual BOOL OnInitDialog();
+
+	//获取控件ID
+	int GetControlID(const std::string& itemId);
+	//更新控件数量，控制为5个
+	void UpdateVisibleControlsByParamCount();
+
+	//对应确定和取消按键的操作
+	virtual void OnBnOK();
+	virtual void OnBnCancel();
 };

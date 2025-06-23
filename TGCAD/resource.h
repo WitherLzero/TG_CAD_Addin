@@ -113,6 +113,9 @@
 #define IDC_PARAM_GROUP6                1042
 #define IDC_EDIT_PARAM8                 1043
 #define IDC_EDIT_PARAM5                 1043
+#define ID_PARAM_OK                     1044
+#define IDC_STATIC_VAL10                1044
+#define ID_PARAM_CANCEL                 1045
 #define IDD_MY_DIALOG                   1076
 #define IDD_CONFIG_DIALOG               1077
 #define IDS_CMD_CATEGORY                2000
@@ -159,7 +162,7 @@
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_NEXT_RESOURCE_VALUE        175
 #define _APS_NEXT_COMMAND_VALUE         40002
-#define _APS_NEXT_CONTROL_VALUE         1036
+#define _APS_NEXT_CONTROL_VALUE         1046
 #define _APS_NEXT_SYMED_VALUE           1078
 #endif
 #endif

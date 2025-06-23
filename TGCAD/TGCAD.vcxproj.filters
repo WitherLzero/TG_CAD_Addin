@@ -43,7 +43,7 @@
     <Filter Include="TGUSER">
       <UniqueIdentifier>{dbaea9f4-a3fa-48be-a561-0018e979fa3b}</UniqueIdentifier>
     </Filter>
-    <Filter Include="TGUSER\DIALOG">
+    <Filter Include="TGUSER\Dialog">
       <UniqueIdentifier>{5f23e8c8-498e-4750-b307-d57cd6d4004b}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -121,7 +121,7 @@
       <Filter>TGUSER</Filter>
     </ClCompile>
     <ClCompile Include="TGUSER\Dialog\ConfigDialog.cpp">
-      <Filter>TGUSER\DIALOG</Filter>
+      <Filter>TGUSER\Dialog</Filter>
     </ClCompile>
     <ClCompile Include="TGUSER\Func\Func.cpp">
       <Filter>TGUSER</Filter>
@@ -130,7 +130,7 @@
       <Filter>TGUSER</Filter>
     </ClCompile>
     <ClCompile Include="TGUSER\Dialog\ParamDriveDialog.cpp">
-      <Filter>TGUSER\DIALOG</Filter>
+      <Filter>TGUSER\Dialog</Filter>
     </ClCompile>
     <ClCompile Include="TGUSER\ParamDriveCmd.cpp">
       <Filter>TGUSER</Filter>
@@ -231,13 +231,13 @@
       <Filter>TGUSER</Filter>
     </ClInclude>
     <ClInclude Include="TGUSER\Dialog\ConfigDialog.h">
-      <Filter>TGUSER\DIALOG</Filter>
-    </ClInclude>
-    <ClInclude Include="TGUSER\Dialog\ParamDriveDialog.h">
-      <Filter>TGUSER\DIALOG</Filter>
+      <Filter>TGUSER\Dialog</Filter>
     </ClInclude>
     <ClInclude Include="TGUSER\ParamDriveCmd.h">
       <Filter>TGUSER</Filter>
+    </ClInclude>
+    <ClInclude Include="TGUSER\Dialog\ParamDriveDialog.h">
+      <Filter>TGUSER\Dialog</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
