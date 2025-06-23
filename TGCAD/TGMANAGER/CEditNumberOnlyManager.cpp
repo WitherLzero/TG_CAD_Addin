@@ -1,11 +1,11 @@
 #include "stdafx.h"
-#include "EditNumberOnly.h"
+#include "CEditNumberOnlyManager.h"
 
-BEGIN_MESSAGE_MAP(CEditNumberOnly, CEdit)
+BEGIN_MESSAGE_MAP(CEditNumberOnlyManager, CEdit)
     ON_WM_CHAR()
 END_MESSAGE_MAP()
 
-void CEditNumberOnly::OnChar(UINT nChar, UINT nRepCnt, UINT nFlags)
+void CEditNumberOnlyManager::OnChar(UINT nChar, UINT nRepCnt, UINT nFlags)
 {
     if (nChar >= '0' && nChar <= '9') {
         CEdit::OnChar(nChar, nRepCnt, nFlags);
@@ -25,6 +25,4 @@ void CEditNumberOnly::OnChar(UINT nChar, UINT nRepCnt, UINT nFlags)
         CEdit::OnChar(nChar, nRepCnt, nFlags);
         return;
     }
-
-    MessageBeep(MB_OK);
 }

@@ -159,6 +159,7 @@ void Func::_createDraft()
 void Func::_save() {
 	ApplicationPtr pApp = TGCADApp::GetApplication();
 
+
 	// try get current Active Doc
 	IDispatch* pDispDoc = pApp->GetActiveDocument();
 

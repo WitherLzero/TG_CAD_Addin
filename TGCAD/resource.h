@@ -76,6 +76,7 @@
 #define IDC_LIST1                       1017
 #define IDC_CONFIG_LIST                 1017
 #define IDC_EDIT2                       1018
+#define IDC_PARAM_EDIT                  1018
 #define IDC_ADD                         1019
 #define IDC_EDIT_VAL1                   1019
 #define IDC_CHECK                       1020

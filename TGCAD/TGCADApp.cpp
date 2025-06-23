@@ -20,6 +20,8 @@ TGCADApp::TGCADApp()
 {
 	// TODO: add construction code here,
 	// Place all significant initialization in InitInstance
+	m_pDataManager = new DataManager();
+	m_pVarManager = new VariableManager();
 }
 
 TGCADApp* TGCADApp::GetTGApp()
@@ -50,6 +52,16 @@ ApplicationPtr TGCADApp::GetApplication()
 	return AppPtr;
 }
 
+DataManager* TGCADApp::GetDataManager()
+{
+	return m_pDataManager;
+}
+
+VariableManager* TGCADApp::GetVarManager()
+{
+	return m_pVarManager;
+}
+
 BOOL TGCADApp::InitInstance()
 {
 	_Module.Init(ObjectMap, m_hInstance);
@@ -61,6 +73,10 @@ STDAPI DllUnregisterServer(void);
 
 int TGCADApp::ExitInstance()
 {
+	if (m_pDataManager) {
+		delete m_pDataManager;
+		m_pDataManager = nullptr;
+	}
 	_Module.Term();
 	return CWinApp::ExitInstance();
 }

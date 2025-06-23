@@ -19,8 +19,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="TGMANAGER\CEditNumberOnlyManager.cpp" />
+    <ClCompile Include="TGMANAGER\DataManager.cpp" />
+    <ClCompile Include="TGMANAGER\VariableManager.cpp" />
     <ClCompile Include="TGUSER\ConfigCmd.cpp" />
-    <ClCompile Include="TGUSER\Data\EditNumberOnly.cpp" />
     <ClCompile Include="TGUSER\Dialog\ConfigDialog.cpp" />
     <ClCompile Include="DEMO\TGEdgebarDialog.cpp" />
     <ClCompile Include="DEMO\TGPopupDialog.cpp" />
@@ -54,8 +56,10 @@
     <ClCompile Include="TGUSER\TGUserCmd.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="TGMANAGER\CEditNumberOnlyManager.h" />
+    <ClInclude Include="TGMANAGER\DataManager.h" />
+    <ClInclude Include="TGMANAGER\VariableManager.h" />
     <ClInclude Include="TGUSER\ConfigCmd.h" />
-    <ClInclude Include="TGUSER\Data\EditNumberOnly.h" />
     <ClInclude Include="TGUSER\Dialog\ConfigDialog.h" />
     <ClInclude Include="DEMO\TGEdgebarDialog.h" />
     <ClInclude Include="DEMO\TGPopupDialog.h" />

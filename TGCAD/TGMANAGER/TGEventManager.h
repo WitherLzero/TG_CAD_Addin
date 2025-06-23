@@ -2,6 +2,9 @@
 
 #include "../TGCADApp.h"
 #include "../TGCAD_i.h"
+#include "DataManager.h"
+
+//DataManager* pDataManager;
 
 class TGDocumentController;
 typedef CComObject<TGDocumentController> TGDocumentControllerObj;

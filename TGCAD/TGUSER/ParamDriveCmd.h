@@ -42,6 +42,5 @@ public:
 		VARIANT_BOOL* vbValid);
 	STDMETHOD(KeyDown)		(short* KeyCode, short Shift);
 
-
 };
 
