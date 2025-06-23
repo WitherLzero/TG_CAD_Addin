@@ -46,6 +46,12 @@
     <Filter Include="TGUSER\Dialog">
       <UniqueIdentifier>{5f23e8c8-498e-4750-b307-d57cd6d4004b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="TGUSER\Func">
+      <UniqueIdentifier>{77b42655-31ff-4866-9031-c2b4eb5e1bde}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TGUSER\Data">
+      <UniqueIdentifier>{7bce4494-c648-4d1f-a787-46dd6883949b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="TGCMDS\TGCmdBase.cpp">
@@ -123,9 +129,6 @@
     <ClCompile Include="TGUSER\Dialog\ConfigDialog.cpp">
       <Filter>TGUSER\Dialog</Filter>
     </ClCompile>
-    <ClCompile Include="TGUSER\Func\Func.cpp">
-      <Filter>TGUSER</Filter>
-    </ClCompile>
     <ClCompile Include="TGUSER\SaveCmd.cpp">
       <Filter>TGUSER</Filter>
     </ClCompile>
@@ -134,6 +137,12 @@
     </ClCompile>
     <ClCompile Include="TGUSER\ParamDriveCmd.cpp">
       <Filter>TGUSER</Filter>
+    </ClCompile>
+    <ClCompile Include="TGUSER\Func\Func.cpp">
+      <Filter>TGUSER\Func</Filter>
+    </ClCompile>
+    <ClCompile Include="TGUSER\Data\EditNumberOnly.cpp">
+      <Filter>TGUSER\Data</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -212,9 +221,6 @@
     <ClInclude Include="TGUSER\TGUserCmd.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="TGUSER\Func\Func.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="TGCAD_i.h">
       <Filter>头文件</Filter>
     </ClInclude>
@@ -238,6 +244,12 @@
     </ClInclude>
     <ClInclude Include="TGUSER\Dialog\ParamDriveDialog.h">
       <Filter>TGUSER\Dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="TGUSER\Func\Func.h">
+      <Filter>TGUSER\Func</Filter>
+    </ClInclude>
+    <ClInclude Include="TGUSER\Data\EditNumberOnly.h">
+      <Filter>TGUSER\Data</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

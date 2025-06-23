@@ -26,4 +26,7 @@ namespace Func
 	//2. Save Document Func
 	void _save();
 
+	//--------------实训大作业功能函数---------------
+	//Double转换成CString
+	CString DoubleToCString(double value);
 }
