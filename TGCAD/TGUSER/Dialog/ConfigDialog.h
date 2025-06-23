@@ -36,5 +36,7 @@ public:
 
 
 private:
-	DataManager* pDataManager; //local manager pointers
+	//local manager pointers
+	DataManager* pDataManager; 
+	VariableManager* pVarManager;
 };

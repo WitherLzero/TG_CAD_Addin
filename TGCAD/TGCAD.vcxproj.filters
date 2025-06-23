@@ -138,6 +138,9 @@
     <ClCompile Include="TGMANAGER\DataManager.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="TGMANAGER\VariableManager.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="TGCMDS\TGCmdBase.h">
@@ -243,6 +246,9 @@
       <Filter>TGUSER</Filter>
     </ClInclude>
     <ClInclude Include="TGMANAGER\DataManager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="TGMANAGER\VariableManager.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

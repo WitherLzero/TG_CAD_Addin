@@ -7,6 +7,7 @@
 #include "resource.h"
 #include "TGCAD_i.h"
 #include "TGMANAGER/DataManager.h"
+#include "TGMANAGER/VariableManager.h"
 
 
 class TGCAD;
@@ -25,10 +26,12 @@ public:
 	void SetTGAddin(TGCAD* pAddin);
 	static ApplicationPtr GetApplication();
 	DataManager* GetDataManager();
+	VariableManager* GetVarManager();
 
 private:
 	TGCAD* m_pTGAddin;
 	DataManager* m_pDataManager;
+	VariableManager* m_pVarManager;
 };
 
 

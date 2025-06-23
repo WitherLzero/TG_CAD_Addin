@@ -21,6 +21,7 @@ TGCADApp::TGCADApp()
 	// TODO: add construction code here,
 	// Place all significant initialization in InitInstance
 	m_pDataManager = new DataManager();
+	m_pVarManager = new VariableManager();
 }
 
 TGCADApp* TGCADApp::GetTGApp()
@@ -54,6 +55,11 @@ ApplicationPtr TGCADApp::GetApplication()
 DataManager* TGCADApp::GetDataManager()
 {
 	return m_pDataManager;
+}
+
+VariableManager* TGCADApp::GetVarManager()
+{
+	return m_pVarManager;
 }
 
 BOOL TGCADApp::InitInstance()

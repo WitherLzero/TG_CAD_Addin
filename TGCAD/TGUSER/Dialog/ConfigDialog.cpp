@@ -15,7 +15,13 @@ IMPLEMENT_DYNAMIC(ConfigDialog, TGDialog)
 ConfigDialog::ConfigDialog(CWnd* pParent /*=nullptr*/)
 	: TGDialog(IDD_CONFIG_DIALOG, pParent)
 {
+	ApplicationPtr pApp = TGCADApp::GetApplication();
+	AssemblyDocumentPtr pAssem = pApp->GetActiveDocument();
 	pDataManager = TGCADApp::GetTGApp()->GetDataManager();
+	pVarManager = TGCADApp::GetTGApp()->GetVarManager();
+	if (pVarManager) {
+		pVarManager->AttachDoc(pAssem);
+	}
 }
 
 ConfigDialog::~ConfigDialog()
@@ -32,6 +38,17 @@ void ConfigDialog::initConfigList()
 	m_configList.InsertColumn(0, _T("No."), LVCFMT_LEFT, 100);
 	m_configList.InsertColumn(1, _T("Parameter"), LVCFMT_LEFT, 250);
 	m_configList.InsertColumn(2, _T("Variable"), LVCFMT_LEFT, 250);
+}
+
+void ConfigDialog::refreshVarCombo()
+{
+	m_varCombo.ResetContent();
+	std::vector<CString> varNames;
+	if (pVarManager)
+		pVarManager->GetVarNames(varNames);
+	for (const auto& v : varNames)
+		m_varCombo.AddString(v);
+
 }
 
 void ConfigDialog::refreshConfigList()
@@ -76,6 +93,7 @@ BOOL ConfigDialog::OnInitDialog()
 	// TODO:  Add extra initialization here
 	initConfigList();
 	refreshConfigList();
+	refreshVarCombo();
 
 	return TRUE;  // return TRUE unless you set the focus to a control
 				  // EXCEPTION: OCX Property Pages should return FALSE

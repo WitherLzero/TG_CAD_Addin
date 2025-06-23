@@ -52,6 +52,7 @@
     <ClCompile Include="TGHELPER\util.cpp" />
     <ClCompile Include="TGMANAGER\TGEventManager.cpp" />
     <ClCompile Include="TGUSER\TGUserCmd.cpp" />
+    <ClCompile Include="TGMANAGER\VariableManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="TGMANAGER\DataManager.h" />
@@ -89,6 +90,7 @@
     <ClInclude Include="TGMANAGER\TGEventManager.h" />
     <ClInclude Include="TGUSER\Func\Func.h" />
     <ClInclude Include="TGUSER\TGUserCmd.h" />
+    <ClInclude Include="TGMANAGER\VariableManager.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="TGCAD.rc" />
