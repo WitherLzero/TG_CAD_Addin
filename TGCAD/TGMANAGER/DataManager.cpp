@@ -1,5 +1,9 @@
 #include "stdafx.h"
 #include "DataManager.h"
+#include <fstream>
+#include <sstream>
+#include <sys/stat.h> // 跨平台的目录检查
+#include <windows.h>  // 用于CreateDirectory
 
 DataManager::DataManager()
 {
@@ -88,4 +92,90 @@ int DataManager::FindIndexByVarName(const CString& varName) const
         }
     }
     return -1;
+}
+// 跨平台的目录存在检查
+bool DirectoryExists(const CString& path)
+{
+    DWORD attrib = GetFileAttributes(path);
+    return (attrib != INVALID_FILE_ATTRIBUTES &&
+        (attrib & FILE_ATTRIBUTE_DIRECTORY));
+}
+
+// 创建目录（如果不存在）
+void EnsureConfigDirectoryExists()
+{
+    CString configDir = _T("CONFIG");
+    if (!DirectoryExists(configDir))
+    {
+        CreateDirectory(configDir, NULL);
+    }
+}
+
+CString DataManager::GetDefaultConfigPath()
+{
+    CString configDir = _T("CONFIG");
+    if (!DirectoryExists(configDir)) {
+        CreateDirectory(configDir, NULL);
+    }
+    return configDir + _T("\\param_mapping.txt");
+}
+
+bool DataManager::SaveToFile(const CString& filePath) const
+{
+    EnsureConfigDirectoryExists();
+
+    CStringA utf8Path(filePath);
+    std::ofstream outFile(utf8Path, std::ios::out);
+    if (!outFile.is_open()) {
+        return false;
+    }
+
+    // 写入文件头
+    outFile << "# Param-Variable Mapping File\n";
+    outFile << "# Format: paramName=varName\n\n";
+
+    // 写入所有绑定关系
+    for (const auto& binding : m_bindings) {
+        CStringA utf8Param(binding.paramName);
+        CStringA utf8Var(binding.varName);
+        outFile << utf8Param << "=" << utf8Var << "\n";
+    }
+
+    outFile.close();
+    return true;
+}
+
+bool DataManager::LoadFromFile(const CString& filePath)
+{
+    CStringA utf8Path(filePath);
+    std::ifstream inFile(utf8Path, std::ios::in);
+    if (!inFile.is_open()) {
+        return false;
+    }
+
+    m_bindings.clear(); // 清空现有绑定
+
+    std::string line;
+    while (std::getline(inFile, line)) {
+        // 跳过空行和注释
+        if (line.empty() || line[0] == '#') {
+            continue;
+        }
+
+        // 解析param=var格式
+        size_t equalPos = line.find('=');
+        if (equalPos != std::string::npos) {
+            std::string paramStr = line.substr(0, equalPos);
+            std::string varStr = line.substr(equalPos + 1);
+
+            // 转换为CString并添加绑定
+            m_bindings.push_back({
+                CString(paramStr.c_str()),
+                CString(varStr.c_str())
+                });
+        }
+    }
+
+    inFile.close();
+    return true;
 }

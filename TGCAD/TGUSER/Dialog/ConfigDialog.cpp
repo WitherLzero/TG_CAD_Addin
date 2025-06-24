@@ -97,6 +97,14 @@ BOOL ConfigDialog::OnInitDialog()
 	TGDialog::OnInitDialog();
 
 	// TODO:  Add extra initialization here
+		// 尝试自动加载保存的配置
+	if (pDataManager && pDataManager->LoadFromFile(DataManager::GetDefaultConfigPath())) {
+		TRACE(_T("Config loaded successfully from %s\n"), DataManager::GetDefaultConfigPath());
+	}
+	else {
+		TRACE(_T("Failed to load config or file not found\n"));
+	}
+
 	initConfigList();
 	refreshConfigList();
 	refreshVarCombo();
@@ -214,6 +222,13 @@ void ConfigDialog::OnModify()
 void ConfigDialog::OnOK()
 {
 	// TODO: Add your specialized code here and/or call the base class
+	// 保存当前配置
+	if (pDataManager && pDataManager->SaveToFile(DataManager::GetDefaultConfigPath())) {
+		TRACE(_T("Config saved successfully to %s\n"), DataManager::GetDefaultConfigPath());
+	}
+	else {
+		AfxMessageBox(_T("保存配置失败！"), MB_ICONERROR);
+	}
 	TGDialog::OnOK();
 }
 
@@ -262,5 +277,3 @@ void ConfigDialog::OnListItemClick(NMHDR* pNMHDR, LRESULT* pResult)
 	*pResult = 0;
 
 }
-
-

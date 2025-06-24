@@ -38,6 +38,8 @@ public:
     bool SaveToFile(const CString& filePath) const;      // 保存到文件
     bool LoadFromFile(const CString& filePath);          // 从文件加载
 
+    static CString GetDefaultConfigPath();               // 获取保存路径
+
 private:
 
     BindingList m_bindings;

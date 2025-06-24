@@ -5,7 +5,7 @@
     <RESOURCE_FILE>TGCAD.rc</RESOURCE_FILE>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <LocalDebuggerCommand>D:\NDS\TianGong 2024 Personal\Program\TianGong.exe</LocalDebuggerCommand>
+    <LocalDebuggerCommand>D:\TianGongCAD\CAD\TianGong 2024 Personal\Program\TianGong.exe</LocalDebuggerCommand>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
