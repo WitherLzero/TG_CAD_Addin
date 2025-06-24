@@ -43,8 +43,11 @@
     <Filter Include="TGUSER">
       <UniqueIdentifier>{dbaea9f4-a3fa-48be-a561-0018e979fa3b}</UniqueIdentifier>
     </Filter>
-    <Filter Include="TGUSER\DIALOG">
+    <Filter Include="TGUSER\Dialog">
       <UniqueIdentifier>{5f23e8c8-498e-4750-b307-d57cd6d4004b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TGUSER\Func">
+      <UniqueIdentifier>{77b42655-31ff-4866-9031-c2b4eb5e1bde}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -121,19 +124,28 @@
       <Filter>TGUSER</Filter>
     </ClCompile>
     <ClCompile Include="TGUSER\Dialog\ConfigDialog.cpp">
-      <Filter>TGUSER\DIALOG</Filter>
-    </ClCompile>
-    <ClCompile Include="TGUSER\Func\Func.cpp">
-      <Filter>TGUSER</Filter>
+      <Filter>TGUSER\Dialog</Filter>
     </ClCompile>
     <ClCompile Include="TGUSER\SaveCmd.cpp">
       <Filter>TGUSER</Filter>
     </ClCompile>
     <ClCompile Include="TGUSER\Dialog\ParamDriveDialog.cpp">
-      <Filter>TGUSER\DIALOG</Filter>
+      <Filter>TGUSER\Dialog</Filter>
     </ClCompile>
     <ClCompile Include="TGUSER\ParamDriveCmd.cpp">
       <Filter>TGUSER</Filter>
+    </ClCompile>
+    <ClCompile Include="TGUSER\Func\Func.cpp">
+      <Filter>TGUSER\Func</Filter>
+    </ClCompile>
+    <ClCompile Include="TGMANAGER\CEditNumberOnlyManager.cpp">
+      <Filter>TGManager</Filter>
+    </ClCompile>
+    <ClCompile Include="TGMANAGER\DataManager.cpp">
+      <Filter>TGManager</Filter>
+    </ClCompile>
+    <ClCompile Include="TGMANAGER\VariableManager.cpp">
+      <Filter>TGManager</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -212,9 +224,6 @@
     <ClInclude Include="TGUSER\TGUserCmd.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="TGUSER\Func\Func.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="TGCAD_i.h">
       <Filter>头文件</Filter>
     </ClInclude>
@@ -231,13 +240,25 @@
       <Filter>TGUSER</Filter>
     </ClInclude>
     <ClInclude Include="TGUSER\Dialog\ConfigDialog.h">
-      <Filter>TGUSER\DIALOG</Filter>
-    </ClInclude>
-    <ClInclude Include="TGUSER\Dialog\ParamDriveDialog.h">
-      <Filter>TGUSER\DIALOG</Filter>
+      <Filter>TGUSER\Dialog</Filter>
     </ClInclude>
     <ClInclude Include="TGUSER\ParamDriveCmd.h">
       <Filter>TGUSER</Filter>
+    </ClInclude>
+    <ClInclude Include="TGUSER\Dialog\ParamDriveDialog.h">
+      <Filter>TGUSER\Dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="TGUSER\Func\Func.h">
+      <Filter>TGUSER\Func</Filter>
+    </ClInclude>
+    <ClInclude Include="TGMANAGER\CEditNumberOnlyManager.h">
+      <Filter>TGManager</Filter>
+    </ClInclude>
+    <ClInclude Include="TGMANAGER\DataManager.h">
+      <Filter>TGManager</Filter>
+    </ClInclude>
+    <ClInclude Include="TGMANAGER\VariableManager.h">
+      <Filter>TGManager</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -4,10 +4,14 @@
 DataManager::DataManager()
 {
     // 测试性初始化，实际开发时应移除
-    m_bindings.push_back({ _T("Length"), _T("A") });
-    m_bindings.push_back({ _T("Width"),  _T("B") });
-    m_bindings.push_back({ _T("Height"), _T("C") });
+    m_bindings.push_back({ _T("Fixed plate length"), _T("A") });
+    m_bindings.push_back({ _T("Side plate width"),  _T("B") });
+    m_bindings.push_back({ _T("Screw diameter"), _T("C") });
+    m_bindings.push_back({ _T("Bearing height"), _T("D") });
+    m_bindings.push_back({ _T("Wheel diameter"), _T("E") });
+
 }
+
 
 bool DataManager::AddBinding(const CString& paramName, const CString& varName)
 {

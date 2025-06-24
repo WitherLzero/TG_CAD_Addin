@@ -221,10 +221,14 @@ void ConfigDialog::OnOK()
 void ConfigDialog::OnCancel()
 {
 	// TODO: Add your specialized code here and/or call the base class
-	if (pDataManager) {
-		pDataManager->SetAllBindings(tempList);
+	int result = AfxMessageBox(_T("您做的更改会被丢弃，是否确认？"), MB_OKCANCEL | MB_ICONQUESTION);
+
+	if (result == IDOK) {
+		if (pDataManager) {
+			pDataManager->SetAllBindings(tempList);
+		}
+		TGDialog::OnCancel();
 	}
-	TGDialog::OnCancel();
 }
 
 

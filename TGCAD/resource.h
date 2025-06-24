@@ -92,15 +92,14 @@
 #define IDC_STATIC_PARAM2               1026
 #define IDC_STATIC_VAL6                 1027
 #define IDC_STATIC_VAL2                 1027
-#define IDC_STATIC_PARAM4               1028
 #define IDC_STATIC_PARAM3               1028
 #define IDC_STATIC_VAL7                 1029
 #define IDC_STATIC_VAL3                 1029
-#define IDC_STATIC_PARAM6               1030
-#define IDC_STATIC_PARAM5               1030
+#define IDC_STATIC_PARAM4               1030
 #define IDC_STATIC_VAL8                 1031
 #define IDC_STATIC_VAL4                 1031
 #define IDC_STATIC_PARAM7               1032
+#define IDC_STATIC_PARAM5               1032
 #define IDC_STATIC_VAL9                 1033
 #define IDC_STATIC_VAL5                 1033
 #define IDC_EDIT_PARAM1                 1034
@@ -110,13 +109,21 @@
 #define IDC_PARAM_GROUP3                1038
 #define IDC_EDIT_PARAM6                 1039
 #define IDC_EDIT_PARAM3                 1039
-#define IDC_PARAM_GROUP5                1040
 #define IDC_PARAM_GROUP4                1040
 #define IDC_EDIT_PARAM7                 1041
 #define IDC_EDIT_PARAM4                 1041
 #define IDC_PARAM_GROUP6                1042
+#define IDC_PARAM_GROUP5                1042
 #define IDC_EDIT_PARAM8                 1043
 #define IDC_EDIT_PARAM5                 1043
+#define ID_PARAM_OK                     1044
+#define IDC_STATIC_VAL10                1044
+#define IDC_STATIC_MM1                  1044
+#define ID_PARAM_CANCEL                 1045
+#define IDC_STATIC_MM2                  1046
+#define IDC_STATIC_MM3                  1047
+#define IDC_STATIC_MM4                  1048
+#define IDC_STATIC_MM5                  1049
 #define IDD_MY_DIALOG                   1076
 #define IDD_CONFIG_DIALOG               1077
 #define IDS_CMD_CATEGORY                2000
@@ -163,7 +170,7 @@
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_NEXT_RESOURCE_VALUE        175
 #define _APS_NEXT_COMMAND_VALUE         40002
-#define _APS_NEXT_CONTROL_VALUE         1036
+#define _APS_NEXT_CONTROL_VALUE         1046
 #define _APS_NEXT_SYMED_VALUE           1078
 #endif
 #endif

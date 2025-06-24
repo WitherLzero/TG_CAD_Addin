@@ -1,5 +1,7 @@
 #include "stdafx.h"
 #include "../Func/Func.h"
+#include <sstream>
+using namespace std;
 
 void Func::_drawAndModel()
 {
@@ -157,7 +159,6 @@ void Func::_createDraft()
 void Func::_save() {
 	ApplicationPtr pApp = TGCADApp::GetApplication();
 
-
 	// try get current Active Doc
 	IDispatch* pDispDoc = pApp->GetActiveDocument();
 
@@ -275,3 +276,15 @@ void Func::DrawSnapRing()
 	auto status = pProfile->End(ProfileValidationType::igProfileClosed);
 
 }
+
+CString Func::DoubleToCString(double value)
+{
+	std::wostringstream oss;
+	oss << value;
+	std::wstring strValue = oss.str();
+
+	CString cstrValue(strValue.c_str());
+	return cstrValue;
+}
+
+

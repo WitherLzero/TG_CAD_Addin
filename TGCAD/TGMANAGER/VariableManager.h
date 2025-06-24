@@ -5,7 +5,7 @@
 
 struct ModelVariable
 {
-	CString name;
+	CString name;//A B C 系统里的变量名
 	double value;
 };
 
@@ -22,12 +22,14 @@ public:
 
 	// 获取当前变量表中所有变量名
 	bool GetVarNames(std::vector<CString>& outNames) const;
+	
+	//通过变量名获取对应值
+	double GetVarValue(const CString& varName) const;
 
-
-	bool GetVarValue(const CString& varName, double& outValue) const;
-
+	//修改变量对应值
 	bool SetVarValue(const CString& varName, double newValue);
 
+private:
 
 
 

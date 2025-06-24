@@ -1,4 +1,4 @@
-#include "stdafx.h"
+﻿#include "stdafx.h"
 #include "ParamDriveCmd.h"
 
 #include "TGHELPER/util.h"
@@ -6,10 +6,25 @@
 
 ParamDriveCmd::ParamDriveCmd()
 {
+	
 }
 
 ParamDriveCmd::~ParamDriveCmd()
 {
+}
+
+bool ParamDriveCmd::CheckParamConfig()
+{
+
+	ApplicationPtr pApp = TGCADApp::GetApplication();
+	AssemblyDocumentPtr pAssem = pApp->GetActiveDocument();
+	pDataManager = TGCADApp::GetTGApp()->GetDataManager();
+
+	if(pDataManager->GetBindingCount()<=0) {
+		AfxMessageBox(_T("未配置，请先完成配置操作！"), MB_ICONWARNING | MB_OK);
+		return false;
+	}
+	return true;
 }
 
 STDMETHODIMP_(HRESULT __stdcall) ParamDriveCmd::Activate()
@@ -17,6 +32,12 @@ STDMETHODIMP_(HRESULT __stdcall) ParamDriveCmd::Activate()
 	using namespace TGConstants;
 
 	HRESULT hr = S_OK;
+
+	//查询配置文件是否存在or文件中是否有有效配置
+	if (!CheckParamConfig())
+	{
+		return E_FAIL;
+	}
 
 	try
 	{

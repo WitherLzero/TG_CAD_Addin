@@ -18,7 +18,6 @@ class DataManager
 {
 public:
     DataManager();
-
     // 绑定管理
     bool AddBinding(const CString& paramName, const CString& varName);   // 新增映射（自动校验唯一性）
     bool RemoveBinding(const CString& paramName);                             // 按参数名删除
@@ -40,7 +39,9 @@ public:
     bool LoadFromFile(const CString& filePath);          // 从文件加载
 
 private:
+
     BindingList m_bindings;
+    ParamVarBinding data[5];
 
     // 帮助方法
     int FindIndexByParamName(const CString& paramName) const;

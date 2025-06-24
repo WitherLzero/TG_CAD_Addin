@@ -41,7 +41,8 @@ public:
 	STDMETHODIMP Filter(LPDISPATCH pGraphicDispatch,
 		VARIANT_BOOL* vbValid);
 	STDMETHOD(KeyDown)		(short* KeyCode, short Shift);
-
-
+private:
+	DataManager* pDataManager;//获取当前是否完成配置
+	bool CheckParamConfig();
 };
 
