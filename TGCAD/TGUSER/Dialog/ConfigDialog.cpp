@@ -1,4 +1,4 @@
-// ConfigDialog.cpp : implementation file
+﻿// ConfigDialog.cpp : implementation file
 //
 
 #include "pch.h"
@@ -22,6 +22,7 @@ ConfigDialog::ConfigDialog(CWnd* pParent /*=nullptr*/)
 	if (pVarManager) {
 		pVarManager->AttachDoc(pAssem);
 	}
+	tempList = pDataManager->GetAllBindings();
 }
 
 ConfigDialog::~ConfigDialog()
@@ -80,6 +81,7 @@ void ConfigDialog::DoDataExchange(CDataExchange* pDX)
 
 
 BEGIN_MESSAGE_MAP(ConfigDialog, TGDialog)
+	ON_BN_CLICKED(IDC_ADD, &ConfigDialog::OnAdd)
 END_MESSAGE_MAP()
 
 
@@ -97,4 +99,63 @@ BOOL ConfigDialog::OnInitDialog()
 
 	return TRUE;  // return TRUE unless you set the focus to a control
 				  // EXCEPTION: OCX Property Pages should return FALSE
+}
+
+
+void ConfigDialog::OnAdd()
+{	
+	// TODO: Add your control notification handler code here
+	CString paramName, varName;
+
+	// 获取窗口所输入的参数名和选择的变量
+	m_paramEdit.GetWindowTextW(paramName);
+	int sel = m_varCombo.GetCurSel();
+
+	if (sel == CB_ERR) {
+		AfxMessageBox(_T("请选择需要绑定的变量！"));
+		return;
+	}
+	
+	m_varCombo.GetLBText(sel, varName);
+
+	// 校验
+	if (paramName.IsEmpty()) {
+		AfxMessageBox(_T("请输入参数名！"));
+		return;
+	}
+	if (pDataManager->IsParamNameExist(paramName)) {
+		AfxMessageBox(_T("参数名已存在！"));
+		return;
+	}
+	if (pDataManager->IsVarNameBound(varName)) {
+		AfxMessageBox(_T("该变量已被绑定！"));
+		return;
+	}
+
+	// 添加
+	if (!pDataManager->AddBinding(paramName, varName)) {
+		AfxMessageBox(_T("添加失败！"));
+		return;
+	}
+
+	// 刷新
+	refreshConfigList();
+
+}
+
+
+void ConfigDialog::OnOK()
+{
+	// TODO: Add your specialized code here and/or call the base class
+	TGDialog::OnOK();
+}
+
+
+void ConfigDialog::OnCancel()
+{
+	// TODO: Add your specialized code here and/or call the base class
+	if (pDataManager) {
+		pDataManager->SetAllBindings(tempList);
+	}
+	TGDialog::OnCancel();
 }

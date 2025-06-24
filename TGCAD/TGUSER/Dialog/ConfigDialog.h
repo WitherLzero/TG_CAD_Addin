@@ -30,13 +30,17 @@ protected:
 	DECLARE_MESSAGE_MAP()
 public:
 	CListCtrl m_configList;
-	virtual BOOL OnInitDialog();
 	CEdit m_paramEdit;
 	CComboBox m_varCombo;
-
+	virtual BOOL OnInitDialog();
 
 private:
 	//local manager pointers
 	DataManager* pDataManager; 
 	VariableManager* pVarManager;
+	BindingList tempList;
+public:
+	afx_msg void OnAdd();
+	virtual void OnOK();
+	virtual void OnCancel();
 };
