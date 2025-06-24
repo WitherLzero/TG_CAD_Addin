@@ -20,12 +20,22 @@ bool DataManager::AddBinding(const CString& paramName, const CString& varName)
 
 bool DataManager::RemoveBinding(const CString& paramName)
 {
+    int idx = FindIndexByParamName(paramName);
+    if (idx == -1) {
+        return false;
+    }
+    m_bindings.erase(m_bindings.begin() + idx);
     return false;
 }
 
-bool DataManager::UpdateBinding(const CString& paramName, const CString& newVarName)
+bool DataManager::UpdateBinding(const CString& oldName, const CString& newName)
 {
-    return false;
+    int idx = FindIndexByParamName(oldName);
+    if (idx == -1) {
+        return false;
+    }
+    m_bindings[idx].paramName = newName;
+    return true;
 }
 
 void DataManager::ClearBindings()

@@ -23,6 +23,7 @@ ConfigDialog::ConfigDialog(CWnd* pParent /*=nullptr*/)
 		pVarManager->AttachDoc(pAssem);
 	}
 	tempList = pDataManager->GetAllBindings();
+	m_nEditSelIdx = -1;
 }
 
 ConfigDialog::~ConfigDialog()
@@ -82,6 +83,9 @@ void ConfigDialog::DoDataExchange(CDataExchange* pDX)
 
 BEGIN_MESSAGE_MAP(ConfigDialog, TGDialog)
 	ON_BN_CLICKED(IDC_ADD, &ConfigDialog::OnAdd)
+	ON_BN_CLICKED(IDC_DELETE, &ConfigDialog::OnDelete)
+	ON_NOTIFY(NM_CLICK, IDC_CONFIG_LIST, &ConfigDialog::OnListItemClick)
+	ON_BN_CLICKED(IDC_MODIFY, &ConfigDialog::OnModify)
 END_MESSAGE_MAP()
 
 
@@ -144,6 +148,69 @@ void ConfigDialog::OnAdd()
 }
 
 
+void ConfigDialog::OnDelete()
+{
+	// TODO: Add your control notification handler code here
+	if (m_nEditSelIdx < 0) {
+		AfxMessageBox(_T("请选中要删除的行！"));
+		return;
+	}
+
+	const auto& binds = pDataManager->GetAllBindings();
+	if (m_nEditSelIdx < 0 || m_nEditSelIdx >= (int)binds.size()) 
+		return;
+
+	CString paramName = binds[m_nEditSelIdx].paramName;
+	pDataManager->RemoveBinding(paramName);
+	refreshConfigList();
+
+	m_paramEdit.SetWindowText(_T(""));
+	m_varCombo.SetCurSel(-1);
+	m_nEditSelIdx = -1;
+	m_varCombo.EnableWindow(true);
+}
+
+void ConfigDialog::OnModify()
+{
+	// TODO: Add your control notification handler code here
+	if (m_nEditSelIdx < 0) {
+		AfxMessageBox(_T("请选中要修改的行！"));
+		return;
+	}
+
+	CString newParamName;
+	m_paramEdit.GetWindowText(newParamName);
+
+	if (newParamName.IsEmpty()) {
+		AfxMessageBox(_T("请输入新的参数名！"));
+		return;
+	}
+
+	const auto& binds = pDataManager->GetAllBindings();
+	for (int i = 0; i < (int)binds.size(); ++i)
+	{
+		if (i == m_nEditSelIdx) continue;
+		if (binds[i].paramName == newParamName) {
+			AfxMessageBox(_T("参数名已存在！"));
+			return;
+		}
+	}
+
+	CString oldParamName = binds[m_nEditSelIdx].paramName;
+	if (!pDataManager->UpdateBinding(oldParamName, newParamName))
+	{
+		AfxMessageBox(_T("修改失败！"));
+		return;
+	}
+	refreshConfigList();
+
+	m_paramEdit.SetWindowText(_T(""));
+	m_varCombo.SetCurSel(-1);
+	m_nEditSelIdx = -1;
+	m_varCombo.EnableWindow(true);
+
+}
+
 void ConfigDialog::OnOK()
 {
 	// TODO: Add your specialized code here and/or call the base class
@@ -159,3 +226,37 @@ void ConfigDialog::OnCancel()
 	}
 	TGDialog::OnCancel();
 }
+
+
+
+
+void ConfigDialog::OnListItemClick(NMHDR* pNMHDR, LRESULT* pResult)
+{
+	LPNMITEMACTIVATE pNMItemActivate = reinterpret_cast<LPNMITEMACTIVATE>(pNMHDR);
+	// TODO: Add your control notification handler code here
+	POSITION pos = m_configList.GetFirstSelectedItemPosition();
+	if (pos)
+	{
+		int nSel = m_configList.GetNextSelectedItem(pos);
+		const auto& binds = pDataManager->GetAllBindings();
+		if (nSel >= 0 && nSel < (int)binds.size())
+		{
+			m_paramEdit.SetWindowText(binds[nSel].paramName);
+			int nComboIdx = m_varCombo.FindStringExact(-1, binds[nSel].varName);
+			m_varCombo.SetCurSel(nComboIdx);
+			m_nEditSelIdx = nSel;
+			m_varCombo.EnableWindow(FALSE); // 禁用变量下拉
+		}
+	}
+	else
+	{
+		m_nEditSelIdx = -1;
+		m_paramEdit.SetWindowText(_T(""));
+		m_varCombo.SetCurSel(-1);
+		m_varCombo.EnableWindow(TRUE); // 非编辑状态允许选择
+	}
+	*pResult = 0;
+
+}
+
+

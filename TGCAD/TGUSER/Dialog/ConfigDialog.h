@@ -32,6 +32,7 @@ public:
 	CListCtrl m_configList;
 	CEdit m_paramEdit;
 	CComboBox m_varCombo;
+	int m_nEditSelIdx;
 	virtual BOOL OnInitDialog();
 
 private:
@@ -41,6 +42,11 @@ private:
 	BindingList tempList;
 public:
 	afx_msg void OnAdd();
+	afx_msg void OnDelete();
+	afx_msg void OnModify();
 	virtual void OnOK();
 	virtual void OnCancel();
+
+	afx_msg void OnListItemClick(NMHDR* pNMHDR, LRESULT* pResult);
+
 };

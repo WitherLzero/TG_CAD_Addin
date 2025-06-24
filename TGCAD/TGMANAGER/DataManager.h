@@ -22,7 +22,7 @@ public:
     // 绑定管理
     bool AddBinding(const CString& paramName, const CString& varName);   // 新增映射（自动校验唯一性）
     bool RemoveBinding(const CString& paramName);                             // 按参数名删除
-    bool UpdateBinding(const CString& paramName, const CString& newVarName); // 更新绑定
+    bool UpdateBinding(const CString& oldParamName, const CString& newParamName); // 更新绑定
     void ClearBindings();                                                     // 清空全部
 
     // 查找&检查

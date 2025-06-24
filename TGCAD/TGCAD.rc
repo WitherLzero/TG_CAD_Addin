@@ -13,7 +13,7 @@
 #undef APSTUDIO_READONLY_SYMBOLS
 
 /////////////////////////////////////////////////////////////////////////////
-// 中文(简体，中国) resources
+// Chinese (Simplified, China) resources
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
 LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
@@ -143,19 +143,21 @@ BEGIN
     PUSHBUTTON      "创建工程图",IDC_DRAFT,115,26,52,18
 END
 
-IDD_CONFIG_DIALOG DIALOGEX 0, 0, 423, 245
+IDD_CONFIG_DIALOG DIALOGEX 0, 0, 423, 260
 STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "配置"
 FONT 8, "MS Shell Dlg", 0, 0, 0x0
 BEGIN
-    DEFPUSHBUTTON   "确定",IDOK,309,224,50,14
-    PUSHBUTTON      "取消",IDCANCEL,366,224,50,14
+    DEFPUSHBUTTON   "确定",IDOK,309,239,50,14
+    PUSHBUTTON      "取消",IDCANCEL,366,239,50,14
     LTEXT           "参数名：",IDC_PARA_NAME,15,177,42,13
     LTEXT           "绑定变量：",IDC_BIND_VAR,144,177,52,11
     COMBOBOX        IDC_VAR_COMBO,191,176,71,30,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
     CONTROL         "",IDC_CONFIG_LIST,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,7,409,160
     EDITTEXT        IDC_PARAM_EDIT,46,176,71,13,ES_AUTOHSCROLL
     PUSHBUTTON      "添加",IDC_ADD,309,175,50,14
+    PUSHBUTTON      "删除",IDC_DELETE,366,175,50,14
+    PUSHBUTTON      "修改",IDC_MODIFY,366,194,50,14
 END
 
 IDD_PARAM_DRIVE_DIALOG DIALOGEX 0, 0, 383, 243
@@ -230,7 +232,7 @@ BEGIN
         LEFTMARGIN, 7
         RIGHTMARGIN, 416
         TOPMARGIN, 7
-        BOTTOMMARGIN, 238
+        BOTTOMMARGIN, 253
     END
 
     IDD_PARAM_DRIVE_DIALOG, DIALOG
@@ -378,12 +380,12 @@ BEGIN
                             "Operation : set attribute for faces..."
 END
 
-#endif    // 中文(简体，中国) resources
+#endif    // Chinese (Simplified, China) resources
 /////////////////////////////////////////////////////////////////////////////
 
 
 /////////////////////////////////////////////////////////////////////////////
-// 英语(美国) resources
+// English (United States) resources
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
 LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
@@ -414,7 +416,7 @@ END
 
 #endif    // APSTUDIO_INVOKED
 
-#endif    // 英语(美国) resources
+#endif    // English (United States) resources
 /////////////////////////////////////////////////////////////////////////////
 
 

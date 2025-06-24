@@ -1,6 +1,6 @@
 //{{NO_DEPENDENCIES}}
-// Microsoft Visual C++ 生成的包含文件。
-// 供 TGCAD.rc 使用
+// Microsoft Visual C++ generated include file.
+// Used by TGCAD.rc
 //
 #define IDR_NEX3DMODELINGTOOL           100
 #define IDS_NAME                        101
@@ -81,7 +81,10 @@
 #define IDC_EDIT_VAL1                   1019
 #define IDC_CHECK                       1020
 #define IDC_EDIT_VAL2                   1020
+#define IDC_DELETE                      1020
 #define IDC_EDIT_VAL3                   1021
+#define IDC_DELETE2                     1021
+#define IDC_MODIFY                      1021
 #define IDC_EDIT_VAL4                   1022
 #define IDC_EDIT_VAL5                   1023
 #define IDC_STATIC_PARAM1               1024
