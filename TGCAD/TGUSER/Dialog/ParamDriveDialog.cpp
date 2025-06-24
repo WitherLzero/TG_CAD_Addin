@@ -46,6 +46,7 @@ BOOL ParamDriveDialog::OnInitDialog()
         ShowParamEdit(i);
         ShowValLabel(i);
         ShowValEdit(i);
+        ShowUnitLabel(i);
     }
 
     return TRUE;
@@ -104,7 +105,14 @@ int ParamDriveDialog::GetControlID(const std::string& itemId) {
         {"IDC_EDIT_VAL2", IDC_EDIT_VAL2},
         {"IDC_EDIT_VAL3", IDC_EDIT_VAL3},
         {"IDC_EDIT_VAL4", IDC_EDIT_VAL4},
-        {"IDC_EDIT_VAL5", IDC_EDIT_VAL5}
+        {"IDC_EDIT_VAL5", IDC_EDIT_VAL5},
+
+        //Static mm Labels
+        { "IDC_STATIC_MM1", IDC_STATIC_MM1},
+        {"IDC_STATIC_MM2", IDC_STATIC_MM2},
+        {"IDC_STATIC_MM3", IDC_STATIC_MM3},
+        {"IDC_STATIC_MM4", IDC_STATIC_MM4},
+        {"IDC_STATIC_MM5", IDC_STATIC_MM5}
     };
 
     auto it = controlIDMap.find(itemId);
@@ -117,13 +125,48 @@ int ParamDriveDialog::GetControlID(const std::string& itemId) {
 }
 
 
-//确定按钮
-void ParamDriveDialog::OnBnOK() {
+void ParamDriveDialog::OnBnOK()
+{
+    int paramCount = pDataManager->GetBindingCount();  // 绑定参数的数量，最多不超过5个
 
-    //保存修改数据，在数据管理类实现
-    /*SaveAllInputs();*/
+    for (int i = 1; i <= paramCount; ++i)
+    {
+        // 拼接输入框ID
+        CString idStr;
+        idStr.Format(_T("IDC_EDIT_VAL%d"), i);
+        CT2A asciiStr(idStr);
+        int nID = GetControlID(std::string(asciiStr));
+
+        if (nID == -1) {
+            continue;
+        }
+
+        // 调用封装好的函数获取输入框 double 值
+        double val = GetEditDoubleValue(nID);
+
+        // 获取对应变量名
+        CString varName = pDataManager->GetAllBindings()[i - 1].varName;
+
+        // 修改变量值
+        pVarManager->SetVarValue(varName, val);
+    }
+
+    // 增加操作完成提示
+    AfxMessageBox(_T("变量值已更改"), MB_ICONINFORMATION);
 
     TGDialog::OnOK();
+}
+
+
+//======== 更改参数的功能函数 ========
+// 获取指定输入框的文本内容，并转换为 double，获取失败返回 0.0
+double ParamDriveDialog::GetEditDoubleValue(int nID)
+{
+    CString valStr;
+    GetDlgItemText(nID, valStr);
+
+    double val = _tstof(valStr);  // CString 转 double
+    return val;
 }
 
 
@@ -196,4 +239,15 @@ void ParamDriveDialog::ShowValEdit(int index)
         CString valStr = Func::DoubleToCString(val);
         pEdit->SetWindowTextW(valStr);
     }
+}
+//显示mm单位静态文本
+void ParamDriveDialog::ShowUnitLabel(int index)
+{
+    CString idStr;
+    idStr.Format(_T("IDC_STATIC_MM%d"), index);
+    CT2A asciiStr(idStr);  // 转换为 const char*
+    int nID = GetControlID(std::string(asciiStr));
+
+    if (CWnd* pLabel = GetDlgItem(nID))
+        pLabel->ShowWindow(TRUE);
 }

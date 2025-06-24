@@ -49,6 +49,10 @@ private:
     void ShowValLabel(int index);
     //显示值输入框
     void ShowValEdit(int index);
+    //显示单位mm静态文本
+    void ShowUnitLabel(int index);
+    //----- 更改参数功能函数 ------
+    double GetEditDoubleValue(int nID);
 
 public:
     // 获取控件ID映射

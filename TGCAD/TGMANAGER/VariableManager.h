@@ -26,6 +26,7 @@ public:
 	//通过变量名获取对应值
 	double GetVarValue(const CString& varName) const;
 
+	//修改变量对应值
 	bool SetVarValue(const CString& varName, double newValue);
 
 private:
@@ -36,7 +37,6 @@ private:
 	AssemblyDocumentPtr m_pDoc;
 	VariablesPtr m_pVars;
 	VarList m_cache;
-	ModelVariable data[5];
 
 	bool LoadVarsFromModel();
 };

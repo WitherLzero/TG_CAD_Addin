@@ -6,22 +6,24 @@
 
 ParamDriveCmd::ParamDriveCmd()
 {
-
+	
 }
 
 ParamDriveCmd::~ParamDriveCmd()
 {
 }
 
-bool CheckParamConfig()
+bool ParamDriveCmd::CheckParamConfig()
 {
-	CString configPath = _T("CONFIG\\param_mapping.txt");
 
-	if (!CFile::GetStatus(configPath, CFileStatus())) {
+	ApplicationPtr pApp = TGCADApp::GetApplication();
+	AssemblyDocumentPtr pAssem = pApp->GetActiveDocument();
+	pDataManager = TGCADApp::GetTGApp()->GetDataManager();
+
+	if(pDataManager->GetBindingCount()<=0) {
 		AfxMessageBox(_T("未配置，请先完成配置操作！"), MB_ICONWARNING | MB_OK);
 		return false;
 	}
-
 	return true;
 }
 

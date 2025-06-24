@@ -116,7 +116,12 @@
 #define IDC_EDIT_PARAM5                 1043
 #define ID_PARAM_OK                     1044
 #define IDC_STATIC_VAL10                1044
+#define IDC_STATIC_MM1                  1044
 #define ID_PARAM_CANCEL                 1045
+#define IDC_STATIC_MM2                  1046
+#define IDC_STATIC_MM3                  1047
+#define IDC_STATIC_MM4                  1048
+#define IDC_STATIC_MM5                  1049
 #define IDD_MY_DIALOG                   1076
 #define IDD_CONFIG_DIALOG               1077
 #define IDS_CMD_CATEGORY                2000
