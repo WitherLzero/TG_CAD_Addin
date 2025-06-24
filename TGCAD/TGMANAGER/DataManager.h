@@ -32,6 +32,7 @@ public:
 
     // 获取全部
     const BindingList& GetAllBindings() const { return m_bindings; }
+    void SetAllBindings(const BindingList& binds) { m_bindings = binds; }
 
 
     // 文件持久化
