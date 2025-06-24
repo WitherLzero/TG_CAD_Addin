@@ -15,6 +15,8 @@ public:
     ParamDriveDialog(CWnd* pParent = nullptr);   // 构造函数
     virtual ~ParamDriveDialog();
     BOOL OnInitDialog();//初始化Dialog
+	void HideControls(int nID); //隐藏所有控件
+	void ShowControls(int nID); //依据数量显示当前的所有控件
 
     DataManager* pDataManager;
     VariableManager* pVarManager;
@@ -38,7 +40,15 @@ protected:
     // =============== 功能函数区 =================
 private:
     // 
-    //----- 初始化Dialog功能函数 ------
+    //===== 初始化Dialog功能函数 ===== 
+    // ---隐藏控件-
+    void HideGroupBox(int index);
+    void HideParamLabel(int index);
+    void HideParamEdit(int index);
+    void HideValLabel(int index);
+    void HideValEdit(int index);
+    void HideUnitLabel(int index);
+    // ---显示控件---
     //显示 Group Box
     void ShowGroupBox(int index);
     //显示参数名静态文本
@@ -51,6 +61,8 @@ private:
     void ShowValEdit(int index);
     //显示单位mm静态文本
     void ShowUnitLabel(int index);
+
+    
     //----- 更改参数功能函数 ------
     double GetEditDoubleValue(int nID);
 

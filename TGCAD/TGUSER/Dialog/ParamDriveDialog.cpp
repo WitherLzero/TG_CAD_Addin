@@ -40,17 +40,19 @@ BOOL ParamDriveDialog::OnInitDialog()
     if (paramNum > maxGroup)
         paramNum = maxGroup;
 
+    // 先隐藏全部控件
+    for (int i = 1; i <= maxGroup; ++i) {
+        HideControls(i);
+    }
+
+    // 再显示需要的
     for (int i = 1; i <= paramNum; ++i) {
-        ShowGroupBox(i);
-        ShowParamLabel(i);
-        ShowParamEdit(i);
-        ShowValLabel(i);
-        ShowValEdit(i);
-        ShowUnitLabel(i);
+        ShowControls(i);
     }
 
     return TRUE;
 }
+
 
 void ParamDriveDialog::DoDataExchange(CDataExchange* pDX)
 {
@@ -156,6 +158,26 @@ void ParamDriveDialog::OnBnOK()
 
     TGDialog::OnOK();
 }
+//隐藏所有控件
+void ParamDriveDialog::HideControls(int nID) 
+{
+    HideGroupBox(nID);
+    HideParamLabel(nID);
+    HideParamEdit(nID);
+    HideValLabel(nID);
+    HideValEdit(nID);
+    HideUnitLabel(nID);
+}
+//依据数量显示当前的所有控件
+void ParamDriveDialog::ShowControls(int nID)
+{
+    ShowGroupBox(nID);
+    ShowParamLabel(nID);
+    ShowParamEdit(nID);
+    ShowValLabel(nID);
+    ShowValEdit(nID);
+    ShowUnitLabel(nID);
+}
 
 
 //======== 更改参数的功能函数 ========
@@ -250,4 +272,65 @@ void ParamDriveDialog::ShowUnitLabel(int index)
 
     if (CWnd* pLabel = GetDlgItem(nID))
         pLabel->ShowWindow(TRUE);
+}
+
+void ParamDriveDialog::HideGroupBox(int index)
+{
+    CString idStr;
+    idStr.Format(_T("IDC_PARAM_GROUP%d"), index);
+    CT2A asciiStr(idStr);
+    int nID = GetControlID(std::string(asciiStr));
+
+    if (CWnd* pGroup = GetDlgItem(nID))
+        pGroup->ShowWindow(SW_HIDE);
+}
+void ParamDriveDialog::HideParamLabel(int index)
+{
+    CString idStr;
+    idStr.Format(_T("IDC_STATIC_PARAM%d"), index);
+    CT2A asciiStr(idStr);
+    int nID = GetControlID(std::string(asciiStr));
+
+    if (CWnd* pLabel = GetDlgItem(nID))
+        pLabel->ShowWindow(SW_HIDE);
+}
+void ParamDriveDialog::HideParamEdit(int index)
+{
+    CString idStr;
+    idStr.Format(_T("IDC_EDIT_PARAM%d"), index);
+    CT2A asciiStr(idStr);
+    int nID = GetControlID(std::string(asciiStr));
+
+    if (CWnd* pEdit = GetDlgItem(nID))
+        pEdit->ShowWindow(SW_HIDE);
+}
+void ParamDriveDialog::HideValLabel(int index)
+{
+    CString idStr;
+    idStr.Format(_T("IDC_STATIC_VAL%d"), index);
+    CT2A asciiStr(idStr);
+    int nID = GetControlID(std::string(asciiStr));
+
+    if (CWnd* pLabel = GetDlgItem(nID))
+        pLabel->ShowWindow(SW_HIDE);
+}
+void ParamDriveDialog::HideValEdit(int index)
+{
+    CString idStr;
+    idStr.Format(_T("IDC_EDIT_VAL%d"), index);
+    CT2A asciiStr(idStr);
+    int nID = GetControlID(std::string(asciiStr));
+
+    if (CWnd* pEdit = GetDlgItem(nID))
+        pEdit->ShowWindow(SW_HIDE);
+}
+void ParamDriveDialog::HideUnitLabel(int index)
+{
+    CString idStr;
+    idStr.Format(_T("IDC_STATIC_MM%d"), index);
+    CT2A asciiStr(idStr);
+    int nID = GetControlID(std::string(asciiStr));
+
+    if (CWnd* pLabel = GetDlgItem(nID))
+        pLabel->ShowWindow(SW_HIDE);
 }
