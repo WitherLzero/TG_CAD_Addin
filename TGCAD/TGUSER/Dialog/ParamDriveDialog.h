@@ -72,4 +72,5 @@ public:
 
     // 按钮响应
     virtual void OnBnOK();
+    virtual void OnBnCANCEL();
 };

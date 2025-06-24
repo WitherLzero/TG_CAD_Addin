@@ -68,6 +68,7 @@ void ParamDriveDialog::DoDataExchange(CDataExchange* pDX)
 
 BEGIN_MESSAGE_MAP(ParamDriveDialog, TGDialog)
     ON_BN_CLICKED(IDOK, &ParamDriveDialog::OnBnOK)
+    ON_BN_CLICKED(IDCANCEL, &ParamDriveDialog::OnBnCANCEL)
 END_MESSAGE_MAP()
 
 
@@ -158,6 +159,17 @@ void ParamDriveDialog::OnBnOK()
 
     TGDialog::OnOK();
 }
+
+void ParamDriveDialog::OnBnCANCEL()
+{
+    int result = AfxMessageBox(_T("您做的更改会被丢弃，是否确认？"), MB_OKCANCEL | MB_ICONQUESTION);
+
+    if (result == IDOK) {
+        TGDialog::OnCancel();
+    }
+    // 如果用户点击“取消”，什么都不做，留在当前界面
+}
+
 //隐藏所有控件
 void ParamDriveDialog::HideControls(int nID) 
 {
