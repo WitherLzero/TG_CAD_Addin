@@ -147,6 +147,12 @@
     <ClCompile Include="TGMANAGER\VariableManager.cpp">
       <Filter>TGManager</Filter>
     </ClCompile>
+    <ClCompile Include="TGUSER\Dialog\DocumentDialog.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="TGUSER\DocCmd.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="TGCMDS\TGCmdBase.h">
@@ -260,6 +266,12 @@
     <ClInclude Include="TGMANAGER\VariableManager.h">
       <Filter>TGManager</Filter>
     </ClInclude>
+    <ClInclude Include="TGUSER\Dialog\DocumentDialog.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="TGUSER\DocCmd.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="TGCAD.rc">
@@ -273,6 +285,7 @@
     <None Include="TGCAD.rgs">
       <Filter>资源文件</Filter>
     </None>
+    <None Include="SDK\LIB\tgframewrk.tlb" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="bitmap1.bmp">

@@ -35,6 +35,7 @@ public:
     void SetAllBindings(const BindingList& binds) { m_bindings = binds; }
 
     // 文件持久化
+    bool SaveConfigForDoc(AssemblyDocumentPtr pAssemDoc);
     bool SaveToFile(const CString& filePath) const;      // 保存到文件
     bool LoadFromFile(const CString& filePath);          // 从文件加载
 

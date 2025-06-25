@@ -19,6 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="TGUSER\DocCmd.cpp" />
+    <ClCompile Include="TGUSER\Dialog\DocumentDialog.cpp" />
     <ClCompile Include="TGMANAGER\CEditNumberOnlyManager.cpp" />
     <ClCompile Include="TGMANAGER\DataManager.cpp" />
     <ClCompile Include="TGMANAGER\VariableManager.cpp" />
@@ -56,6 +58,8 @@
     <ClCompile Include="TGUSER\TGUserCmd.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="TGUSER\DocCmd.h" />
+    <ClInclude Include="TGUSER\Dialog\DocumentDialog.h" />
     <ClInclude Include="TGMANAGER\CEditNumberOnlyManager.h" />
     <ClInclude Include="TGMANAGER\DataManager.h" />
     <ClInclude Include="TGMANAGER\VariableManager.h" />
@@ -101,6 +105,7 @@
     <Xml Include="res\TGPDMRibbon.xml" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="SDK\LIB\tgframewrk.tlb" />
     <None Include="TGCAD.rgs" />
   </ItemGroup>
   <ItemGroup>

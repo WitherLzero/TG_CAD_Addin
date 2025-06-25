@@ -121,11 +121,15 @@
 #define IDC_STATIC_MM1                  1044
 #define ID_PARAM_CANCEL                 1045
 #define IDC_STATIC_MM2                  1046
+#define IDC_SAVE                        1046
 #define IDC_STATIC_MM3                  1047
+#define IDC_SAVE2                       1047
+#define IDC_LOAD                        1047
 #define IDC_STATIC_MM4                  1048
 #define IDC_STATIC_MM5                  1049
 #define IDD_MY_DIALOG                   1076
 #define IDD_CONFIG_DIALOG               1077
+#define IDD_DOC_DIALOG                  1078
 #define IDS_CMD_CATEGORY                2000
 #define IDS_CMD_GROUP_MODELTESTTOOLS    2001
 #define IDS_CMD_DATABASECHECK           2002
@@ -168,9 +172,9 @@
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
-#define _APS_NEXT_RESOURCE_VALUE        175
+#define _APS_NEXT_RESOURCE_VALUE        176
 #define _APS_NEXT_COMMAND_VALUE         40002
-#define _APS_NEXT_CONTROL_VALUE         1046
-#define _APS_NEXT_SYMED_VALUE           1078
+#define _APS_NEXT_CONTROL_VALUE         1047
+#define _APS_NEXT_SYMED_VALUE           1079
 #endif
 #endif

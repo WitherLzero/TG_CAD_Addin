@@ -8,11 +8,11 @@
 DataManager::DataManager()
 {
     // 测试性初始化，实际开发时应移除
-    m_bindings.push_back({ _T("Fixed plate length"), _T("A") });
-    m_bindings.push_back({ _T("Side plate width"),  _T("B") });
-    m_bindings.push_back({ _T("Screw diameter"), _T("C") });
-    m_bindings.push_back({ _T("Bearing height"), _T("D") });
-    m_bindings.push_back({ _T("Wheel diameter"), _T("E") });
+    //m_bindings.push_back({ _T("Fixed plate length"), _T("A") });
+    //m_bindings.push_back({ _T("Side plate width"),  _T("B") });
+    //m_bindings.push_back({ _T("Screw diameter"), _T("C") });
+    //m_bindings.push_back({ _T("Bearing height"), _T("D") });
+    //m_bindings.push_back({ _T("Wheel diameter"), _T("E") });
 
 }
 
@@ -101,15 +101,6 @@ bool DirectoryExists(const CString& path)
         (attrib & FILE_ATTRIBUTE_DIRECTORY));
 }
 
-// 创建目录（如果不存在）
-void EnsureConfigDirectoryExists()
-{
-    CString configDir = _T("CONFIG");
-    if (!DirectoryExists(configDir))
-    {
-        CreateDirectory(configDir, NULL);
-    }
-}
 
 CString DataManager::GetDefaultConfigPath()
 {
@@ -120,9 +111,31 @@ CString DataManager::GetDefaultConfigPath()
     return configDir + _T("\\param_mapping.txt");
 }
 
+bool DataManager::SaveConfigForDoc(AssemblyDocumentPtr pAssemDoc)
+{
+    if (!pAssemDoc) return false;
+    if (GetBindingCount() == 0) return true; // 没有参数绑定就不保存，直接成功返回
+
+    // 获取装配文档所在目录
+    CString docDir = (LPCWSTR)pAssemDoc->GetPath();
+    if (docDir.IsEmpty()) return false;
+
+    // 构造 CONFIG 子目录路径
+    CString configDir = docDir + _T("\\CONFIG");
+    if (!DirectoryExists(configDir)) {
+        if (!CreateDirectory(configDir, NULL)) {
+            return false;
+        }
+    }
+
+    CString configFile = configDir + _T("\\param_mapping.txt");
+    // 直接用已有 SaveToFile 方法实现实际写入
+    return SaveToFile(configFile);
+}
+
 bool DataManager::SaveToFile(const CString& filePath) const
 {
-    EnsureConfigDirectoryExists();
+    //EnsureConfigDirectoryExists();
 
     CStringA utf8Path(filePath);
     std::ofstream outFile(utf8Path, std::ios::out);

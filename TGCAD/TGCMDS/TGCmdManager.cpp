@@ -61,6 +61,7 @@ void TGCmdManager::InitCommandMap()
     
     INITCMDCOM(ConfigCmdObj, ConfigCommand);
     INITCMDCOM(ParamDriveCmdObj, ParamDriveCommand);
+    INITCMDCOM(DocDialogObj, DocCommand);
 
 
 ;
@@ -69,6 +70,7 @@ void TGCmdManager::InitCommandMap()
     
     InsertCommand(100, ConfigCommand);
     InsertCommand(101, ParamDriveCommand);
+    InsertCommand(102, DocCommand);
 
 
 }

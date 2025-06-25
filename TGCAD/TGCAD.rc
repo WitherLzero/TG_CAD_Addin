@@ -102,6 +102,11 @@ BEGIN
     0
 END
 
+IDD_DOC_DIALOG AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -199,6 +204,15 @@ BEGIN
     LTEXT           "mm",IDC_STATIC_MM5,341,188,14,8
 END
 
+IDD_DOC_DIALOG DIALOGEX 0, 0, 165, 71
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "保存/加载"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    PUSHBUTTON      "保存",IDC_SAVE,21,28,50,14
+    PUSHBUTTON      "加载",IDC_LOAD,89,28,50,14
+END
+
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -246,6 +260,14 @@ BEGIN
         RIGHTMARGIN, 413
         TOPMARGIN, 7
         BOTTOMMARGIN, 238
+    END
+
+    IDD_DOC_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 158
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 64
     END
 END
 #endif    // APSTUDIO_INVOKED

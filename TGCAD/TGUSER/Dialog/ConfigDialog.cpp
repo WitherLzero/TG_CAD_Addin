@@ -38,8 +38,8 @@ void ConfigDialog::initConfigList()
 	m_configList.SetExtendedStyle(m_configList.GetExtendedStyle() | LVS_EX_GRIDLINES | LVS_EX_FULLROWSELECT);
 
 	m_configList.InsertColumn(0, _T("No."), LVCFMT_LEFT, 100);
-	m_configList.InsertColumn(1, _T("Parameter"), LVCFMT_LEFT, 250);
-	m_configList.InsertColumn(2, _T("Variable"), LVCFMT_LEFT, 250);
+	m_configList.InsertColumn(1, _T("参数名"), LVCFMT_LEFT, 250);
+	m_configList.InsertColumn(2, _T("变量名"), LVCFMT_LEFT, 250);
 }
 
 void ConfigDialog::refreshVarCombo()
@@ -98,12 +98,12 @@ BOOL ConfigDialog::OnInitDialog()
 
 	// TODO:  Add extra initialization here
 		// 尝试自动加载保存的配置
-	if (pDataManager && pDataManager->LoadFromFile(DataManager::GetDefaultConfigPath())) {
-		TRACE(_T("Config loaded successfully from %s\n"), DataManager::GetDefaultConfigPath());
-	}
-	else {
-		TRACE(_T("Failed to load config or file not found\n"));
-	}
+	//if (pDataManager && pDataManager->LoadFromFile(DataManager::GetDefaultConfigPath())) {
+	//	TRACE(_T("Config loaded successfully from %s\n"), DataManager::GetDefaultConfigPath());
+	//}
+	//else {
+	//	TRACE(_T("Failed to load config or file not found\n"));
+	//}
 
 	initConfigList();
 	refreshConfigList();
@@ -124,7 +124,7 @@ void ConfigDialog::OnAdd()
 	int sel = m_varCombo.GetCurSel();
 
 	if (sel == CB_ERR) {
-		AfxMessageBox(_T("请选择需要绑定的变量！"));
+		AfxMessageBox(_T("请选择需要绑定的变量！"), MB_OK | MB_ICONWARNING);
 		return;
 	}
 	
@@ -132,21 +132,21 @@ void ConfigDialog::OnAdd()
 
 	// 校验
 	if (paramName.IsEmpty()) {
-		AfxMessageBox(_T("请输入参数名！"));
+		AfxMessageBox(_T("请输入参数名！"), MB_OK | MB_ICONWARNING);
 		return;
 	}
 	if (pDataManager->IsParamNameExist(paramName)) {
-		AfxMessageBox(_T("参数名已存在！"));
+		AfxMessageBox(_T("参数名已存在！"), MB_OK | MB_ICONWARNING);
 		return;
 	}
 	if (pDataManager->IsVarNameBound(varName)) {
-		AfxMessageBox(_T("该变量已被绑定！"));
+		AfxMessageBox(_T("该变量已被绑定！"), MB_OK | MB_ICONWARNING);
 		return;
 	}
 
 	// 添加
 	if (!pDataManager->AddBinding(paramName, varName)) {
-		AfxMessageBox(_T("添加失败！"));
+		AfxMessageBox(_T("添加失败！"), MB_OK | MB_ICONERROR);
 		return;
 	}
 
@@ -160,7 +160,7 @@ void ConfigDialog::OnDelete()
 {
 	// TODO: Add your control notification handler code here
 	if (m_nEditSelIdx < 0) {
-		AfxMessageBox(_T("请选中要删除的行！"));
+		AfxMessageBox(_T("请选中要删除的行！"), MB_OK | MB_ICONWARNING);
 		return;
 	}
 
@@ -182,7 +182,7 @@ void ConfigDialog::OnModify()
 {
 	// TODO: Add your control notification handler code here
 	if (m_nEditSelIdx < 0) {
-		AfxMessageBox(_T("请选中要修改的行！"));
+		AfxMessageBox(_T("请选中要修改的行！"), MB_OK | MB_ICONWARNING);
 		return;
 	}
 
@@ -190,7 +190,7 @@ void ConfigDialog::OnModify()
 	m_paramEdit.GetWindowText(newParamName);
 
 	if (newParamName.IsEmpty()) {
-		AfxMessageBox(_T("请输入新的参数名！"));
+		AfxMessageBox(_T("请输入新的参数名！"), MB_OK | MB_ICONWARNING);
 		return;
 	}
 
@@ -199,7 +199,7 @@ void ConfigDialog::OnModify()
 	{
 		if (i == m_nEditSelIdx) continue;
 		if (binds[i].paramName == newParamName) {
-			AfxMessageBox(_T("参数名已存在！"));
+			AfxMessageBox(_T("参数名已存在！"), MB_OK | MB_ICONWARNING);
 			return;
 		}
 	}
@@ -207,7 +207,7 @@ void ConfigDialog::OnModify()
 	CString oldParamName = binds[m_nEditSelIdx].paramName;
 	if (!pDataManager->UpdateBinding(oldParamName, newParamName))
 	{
-		AfxMessageBox(_T("修改失败！"));
+		AfxMessageBox(_T("修改失败！"), MB_OK | MB_ICONERROR);
 		return;
 	}
 	refreshConfigList();
@@ -222,13 +222,6 @@ void ConfigDialog::OnModify()
 void ConfigDialog::OnOK()
 {
 	// TODO: Add your specialized code here and/or call the base class
-	// 保存当前配置
-	if (pDataManager && pDataManager->SaveToFile(DataManager::GetDefaultConfigPath())) {
-		TRACE(_T("Config saved successfully to %s\n"), DataManager::GetDefaultConfigPath());
-	}
-	else {
-		AfxMessageBox(_T("保存配置失败！"), MB_ICONERROR);
-	}
 	TGDialog::OnOK();
 }
 

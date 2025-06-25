@@ -1,8 +1,4 @@
 # Param-Variable Mapping File
 # Format: paramName=varName
 
-Fixed plate length=A
-Side plate width=B
-Screw diameter=C
-Bearing height=E
-Wheel diameter=D
+test=×°Åä1.asm::A
