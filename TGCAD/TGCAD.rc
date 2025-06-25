@@ -13,7 +13,7 @@
 #undef APSTUDIO_READONLY_SYMBOLS
 
 /////////////////////////////////////////////////////////////////////////////
-// Chinese (Simplified, China) resources
+// 中文(简体，中国) resources
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
 LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
@@ -197,11 +197,11 @@ BEGIN
     LTEXT           "值：",IDC_STATIC_VAL5,213,187,18,8
     EDITTEXT        IDC_EDIT_VAL5,233,185,106,14,ES_AUTOHSCROLL
     EDITTEXT        IDC_EDIT_PARAM5,63,185,91,14,ES_AUTOHSCROLL | ES_READONLY | NOT WS_VISIBLE
-    LTEXT           "mm",IDC_STATIC_MM1,341,32,14,8
-    LTEXT           "mm",IDC_STATIC_MM2,341,71,14,8
-    LTEXT           "mm",IDC_STATIC_MM3,341,109,14,8
-    LTEXT           "mm",IDC_STATIC_MM4,341,149,14,8
-    LTEXT           "mm",IDC_STATIC_MM5,341,188,14,8
+    LTEXT           "m",IDC_STATIC_MM1,341,32,8,8
+    LTEXT           "m",IDC_STATIC_MM2,341,71,8,8
+    LTEXT           "m",IDC_STATIC_MM3,341,109,8,8
+    LTEXT           "m",IDC_STATIC_MM4,341,149,8,8
+    LTEXT           "m",IDC_STATIC_MM5,341,188,8,8
 END
 
 IDD_DOC_DIALOG DIALOGEX 0, 0, 165, 71
@@ -407,12 +407,12 @@ BEGIN
                             "Operation : set attribute for faces..."
 END
 
-#endif    // Chinese (Simplified, China) resources
+#endif    // 中文(简体，中国) resources
 /////////////////////////////////////////////////////////////////////////////
 
 
 /////////////////////////////////////////////////////////////////////////////
-// English (United States) resources
+// 英语(美国) resources
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
 LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
@@ -443,7 +443,7 @@ END
 
 #endif    // APSTUDIO_INVOKED
 
-#endif    // English (United States) resources
+#endif    // 英语(美国) resources
 /////////////////////////////////////////////////////////////////////////////
 
 
